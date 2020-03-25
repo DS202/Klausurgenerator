@@ -6,7 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.net.URL;
 import java.util.Date;
+
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -48,9 +50,12 @@ public class Hauptfenster {
 		panel.add(lblPrfungsgenerierertool);
 
 		// Label-Bild
-		ImageIcon imageIcon = new ImageIcon(
-				"D:\\Eclipse\\Workspace\\Klausurgenerator\\ProjektKlausurgenerator\\resources\\images\\pruefungIcon.PNG"); // Bild
-																															// laden
+		URL imageUrl = Hauptfenster.class.getClassLoader().getResource("images/pruefungIcon.PNG");
+		// Fängt im Ordner /resources/ an.
+		// imageUrl = this.getClass().getResource("images/pruefungIcon.PNG");
+		// -> Geht nicht.
+		ImageIcon imageIcon = new ImageIcon(imageUrl); // Bild
+		// laden
 		Image image = imageIcon.getImage(); // umwandeln
 		Image newimg = image.getScaledInstance(400, 350, java.awt.Image.SCALE_SMOOTH); // smooth Skalieren
 		imageIcon = new ImageIcon(newimg); // zurueck umwandeln
@@ -136,10 +141,10 @@ public class Hauptfenster {
 				System.out.println("Erstellen");
 			}
 		});
-		
+
 		mnKlausur.add(mntmexportieren);
 		mnKlausur.add(mntmimportieren);
-		mnKlausur.add(mntmerstellen); 
+		mnKlausur.add(mntmerstellen);
 		menuBar.add(mnHilfe);
 	}
 }
