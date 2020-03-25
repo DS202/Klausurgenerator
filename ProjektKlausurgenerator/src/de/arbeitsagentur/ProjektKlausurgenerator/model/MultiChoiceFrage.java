@@ -20,7 +20,7 @@ public class MultiChoiceFrage extends AbstractFrage {
  * @param rAntwort
  * @param antworten
  */
-	MultiChoiceFrage(String frage, Schwierigkeitsgrad schwierigkeitsgrad, int punkte, String seminar, String rAntwort ,String[] antworten) {
+	public MultiChoiceFrage(String frage, Schwierigkeitsgrad schwierigkeitsgrad, int punkte, String seminar, String rAntwort ,String[] antworten) {
 		super(frage, schwierigkeitsgrad, punkte, seminar);
 		this.antworten = antworten;
 		this.rAntwort = rAntwort;
@@ -30,6 +30,14 @@ public class MultiChoiceFrage extends AbstractFrage {
 		super(rawFrage);
 		rAntwort = rawFrage[5];
 		antworten = antwortSplitter(rawFrage, 6);
+	}
+	
+	public String getRichtigeAntwort() {
+		return rAntwort;
+	}
+	
+	public String[] getMoeglichAntworten() {
+		return antworten;
 	}
 
 
