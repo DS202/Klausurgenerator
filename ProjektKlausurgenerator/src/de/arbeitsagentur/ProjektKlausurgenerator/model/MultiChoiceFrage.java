@@ -47,7 +47,7 @@ public class MultiChoiceFrage extends AbstractFrage {
 	}
 
 	@Override
-	protected String getFrageTyp() {
+	public String getFrageTyp() {
 		return this.getClass().getSimpleName();
 	}
 

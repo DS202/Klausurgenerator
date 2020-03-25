@@ -119,5 +119,5 @@ public abstract class AbstractFrage {
 
 	protected abstract Object getAntwort();
 
-	protected abstract String getFrageTyp();
+	public abstract String getFrageTyp();
 }
