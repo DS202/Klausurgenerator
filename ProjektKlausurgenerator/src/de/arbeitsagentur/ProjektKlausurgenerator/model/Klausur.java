@@ -20,7 +20,7 @@ public class Klausur {
 		return fragenList;
 	}
 
-	Klausur(int anzahlPunkte, String klausurname, List<AbstractFrage> fragenList){
+	public Klausur(int anzahlPunkte, String klausurname, List<AbstractFrage> fragenList){
 		this.anzahlPunkte = anzahlPunkte;
 		this.klausurname = klausurname;
 		this.fragenList = fragenList;

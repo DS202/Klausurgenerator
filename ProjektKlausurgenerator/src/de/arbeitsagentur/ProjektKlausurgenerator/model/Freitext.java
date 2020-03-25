@@ -17,12 +17,12 @@ public class Freitext extends AbstractFrage {
  * @param seminar
  * @param schluesselwoerter
  */
-	Freitext(String frage, Schwierigkeitsgrad schwierigkeitsgrad, int punkte, String seminar, String[] schluesselwoerter) {
+	public Freitext(String frage, Schwierigkeitsgrad schwierigkeitsgrad, int punkte, String seminar, String[] schluesselwoerter) {
 		super(frage, schwierigkeitsgrad, punkte, seminar);
 		this.schluesselwoerter = schluesselwoerter;
 	}
 	
-	Freitext(String[] rawFrage) {
+	public Freitext(String[] rawFrage) {
 		super(rawFrage);
 		schluesselwoerter = antwortSplitter(rawFrage, 5);
 	}
