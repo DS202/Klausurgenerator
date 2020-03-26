@@ -19,6 +19,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 
 import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.Klausur;
+
 /**
  * Abstracte Klasse um die Klausuren bzw. Lösungen zu erstellen
  * @author DDJ
@@ -56,18 +57,22 @@ public abstract class PDFCreator {
 	private void addInhalt() throws MalformedURLException, IOException, DocumentException {
 		int frageIndex = 1;
 		for (AbstractFrage frage : fragenListe) {
+			
 			Paragraph frageParagraph = new Paragraph();
 			frageParagraph.add(new Paragraph(frageIndex + ") " + frage.getFrageText()));
 			addPunkte(frageParagraph, frage.getPunkte());
 			addAntwortElement(frageParagraph, frage);
 			klausurDokument.add(frageParagraph);
 
-			if (frageIndex % 3 == 0) {
-				klausurDokument.newPage();
-
-			}
+			pruefeFragenZahlAufSeite(frageIndex);
 
 			frageIndex++;
+		}
+	}
+
+	private void pruefeFragenZahlAufSeite(int frageIndex) {
+		if (frageIndex % 3 == 0) {
+			klausurDokument.newPage();
 		}
 	}
 
@@ -175,9 +180,9 @@ public abstract class PDFCreator {
 
 	private int getDurchgeange() {
 		int listenGroesse = fragenListe.size();
-		int mod5 = listenGroesse % 6;
-		if (mod5 != 0) {
-			listenGroesse = listenGroesse + (6 - mod5);
+		int mod6 = listenGroesse % 6;
+		if (mod6 != 0) {
+			listenGroesse = listenGroesse + (6 - mod6);
 		}
 		return listenGroesse / 6;
 	}
