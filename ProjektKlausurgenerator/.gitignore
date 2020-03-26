@@ -1,2 +1,5 @@
 /bin/
-/KlausurTest.pdf
+KlausurTest.pdf
+/.settings/
+.classpath
+.project

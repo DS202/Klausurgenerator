@@ -4,19 +4,24 @@ import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.io.File;
 import java.net.URL;
 import java.util.Date;
 
 import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.BevelBorder;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
+import de.arbeitsagentur.ProjektKlausurgenerator.enums.Filetype;
 
 public class Hauptfenster {
 
@@ -85,17 +90,12 @@ public class Hauptfenster {
 		JMenu mnMenue = new JMenu("Men\u00FC");
 		menuBar.add(mnMenue);
 
-		JMenuItem mntmFragenAnzeigen = new JMenuItem("Fragentabelle anzeigen");
-		mntmFragenAnzeigen.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				new FragenTabelleFenster();
-			}
-		});
-
-		JMenuItem mntmFrageHinzuefgen = new JMenuItem("Frage Hinzuf\u00FCgen");
+		JMenuItem mntmFrageHinzuefgen = new JMenuItem("Hilfe");
 		mntmFrageHinzuefgen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("frage hinzu...");
+				System.out.println("Hilfe anzeigen");
+				JOptionPane.showMessageDialog(null, "Prüfungstool der Gruppe F18", "Hilfe",
+						JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 
@@ -107,16 +107,7 @@ public class Hauptfenster {
 		});
 
 		mnMenue.add(mntmFrageHinzuefgen);
-		mnMenue.add(mntmFragenAnzeigen);
 		mnMenue.add(mntmBeenden);
-
-		JMenu mnHilfe = new JMenu("Hilfe");
-		mnHilfe.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent arg0) {
-				System.out.println("Hilfe");
-			}
-		});
 
 		JMenu mnKlausur = new JMenu("Klausur...");
 		menuBar.add(mnKlausur);
@@ -124,14 +115,57 @@ public class Hauptfenster {
 		JMenuItem mntmimportieren = new JMenuItem("...Importieren");
 		mntmimportieren.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("import");
+
+				JFileChooser chooser = new JFileChooser();
+				FileFilter filter = new FileNameExtensionFilter("csv", "CSV");
+
+				chooser.setFileFilter(filter); // Filepicker auf CSV einschraenken
+				chooser.showDialog(null, "Klausur auswählen");
+
+				File file = chooser.getSelectedFile();
+				if (file != null) {
+					if (file.exists()) {
+						// TODO:Uebergabe an Logik!
+						System.out.println("Übergabe an Logik" + "   " + file.getAbsolutePath());
+					}else {
+						JOptionPane.showMessageDialog(null, "Ausgewählte Datei existiert nicht.", "Error",
+								JOptionPane.ERROR_MESSAGE);
+					}
+
+				}
 			}
 		});
 
 		JMenuItem mntmexportieren = new JMenuItem("...Exportieren");
 		mntmexportieren.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("export");
+				JFileChooser fileChooser = new JFileChooser();
+				fileChooser.setDialogTitle("Specify a file to save");
+				fileChooser.setAcceptAllFileFilterUsed(false);// deaktiviert "eigene Datei" Auswahlmoeglickeit
+
+				FileFilter filtercsv = new FileNameExtensionFilter("CSV", "csv");
+				FileFilter filterpdf = new FileNameExtensionFilter("PDF", "pdf");
+
+				fileChooser.addChoosableFileFilter(filtercsv);
+				fileChooser.addChoosableFileFilter(filterpdf);
+
+				int userSelection = fileChooser.showSaveDialog(frame);
+
+				if (userSelection == JFileChooser.APPROVE_OPTION) {
+
+					File fileToSave = fileChooser.getSelectedFile();
+					FileFilter filter = fileChooser.getFileFilter();
+					Filetype type = null;
+
+					if (filter.equals(filtercsv)) {
+						type = Filetype.CSV;
+					} else {
+						type = Filetype.PDF;
+					}
+
+					// TODO:File speichern nach erhalt von Logik
+					System.out.println("Save as file: " + fileToSave.getAbsolutePath() + "." + type);
+				}
 			}
 		});
 
@@ -145,6 +179,5 @@ public class Hauptfenster {
 		mnKlausur.add(mntmexportieren);
 		mnKlausur.add(mntmimportieren);
 		mnKlausur.add(mntmerstellen);
-		menuBar.add(mnHilfe);
 	}
 }
