@@ -40,6 +40,13 @@ public class MultiChoiceFrage extends AbstractFrage {
 		return antworten;
 	}
 
+	public String[] getAntworten() {
+		return antworten;
+	}
+
+	public String getrAntwort() {
+		return rAntwort;
+	}
 
 	@Override
 	protected Object getAntwort() {

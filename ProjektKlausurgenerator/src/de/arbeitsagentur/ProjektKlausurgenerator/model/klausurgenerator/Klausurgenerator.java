@@ -21,7 +21,10 @@ public class Klausurgenerator extends PDFCreator {
 
 	@Override
 	protected String getPDFName() {
+
 		return klausur.getKlausurName() + ".pdf";
+
+
 	}
 
 	@Override
@@ -37,6 +40,7 @@ public class Klausurgenerator extends PDFCreator {
 			}
 
 		}
+
 		if (frage.getFrageTyp().equals(MultiChoiceFrage.class.getSimpleName())) {
 			for (String moeglicheAntwort : ((MultiChoiceFrage) frage).getMoeglichAntworten()) {
 				frageParagraph.add(new Paragraph("[  ]  " + moeglicheAntwort));
