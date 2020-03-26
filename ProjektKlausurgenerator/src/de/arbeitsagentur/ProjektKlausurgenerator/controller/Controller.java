@@ -1,5 +1,6 @@
 package de.arbeitsagentur.ProjektKlausurgenerator.controller;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Collections;
 import java.util.List;
@@ -11,6 +12,7 @@ import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.Freitext;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.MultiChoiceFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.Klausur;
+import de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator.CsvCreator;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator.Klausurgenerator;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.csvVerwaltung.fragenImporter;
 
@@ -49,6 +51,17 @@ public class Controller {
 		return fragenImporter.importFragen(); 
 	}
 	
+	public List<AbstractFrage> bearbeiteKlausur(File csvInput) {
+		
+		
+		
+		//TODO
+		//1. Validation if File is compatible
+		//2. Convert File in List
+		
+		return null;
+	}
+	
 	private void erstelleKlausur(Klausur klausur) {
 		int anzahlPunkte = klausur.getPunkte();
 		List<AbstractFrage> fragenList = klausur.getFragenList();
@@ -78,6 +91,7 @@ public class Controller {
 		
 		try {
 			new Klausurgenerator().createKlausur(new Klausur(anzahlPunkte, klausur.getKlausurName(), endgueltigeKlausurListeAbstractFrages));
+			new CsvCreator().createCsvDatei(anzahlPunkte, klausur.getKlausurName(), endgueltigeKlausurListeAbstractFrages);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (DocumentException e) {
