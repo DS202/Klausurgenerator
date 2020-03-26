@@ -45,6 +45,9 @@ public class Controller {
 		}
 	}
 	
+	public List<AbstractFrage> getAlleFragen() {
+		return fragenImporter.importFragen(); 
+	}
 	
 	private void erstelleKlausur(Klausur klausur) {
 		int anzahlPunkte = klausur.getPunkte();
