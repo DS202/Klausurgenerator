@@ -10,7 +10,7 @@ import de.arbeitsagentur.ProjektKlausurgenerator.model.MultiChoiceFrage;
 
 public class CsvCreator {
 	private FileWriter newCsvDatei;
-	private static final char DEFAULT__SEPARATOR = ',';
+	private static final char DEFAULT__SEPARATOR = ';';
 	
 	public boolean createCsvDatei(int anzahlPunkte, String klausurname, List<AbstractFrage> fragenListe) {
 		if (klausurname.isEmpty()) {
