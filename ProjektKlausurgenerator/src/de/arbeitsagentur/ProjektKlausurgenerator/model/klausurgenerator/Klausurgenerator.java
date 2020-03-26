@@ -16,7 +16,7 @@ public class Klausurgenerator extends PDFCreator {
 	protected void addAntwortElement(Paragraph frageParagraph, AbstractFrage frage) {
 
 		if(frage.getFrageTyp().equals(Freitext.class.getSimpleName())) {
-			
+			//AddLinien PlanungsPhase
 		}
 		
 		
