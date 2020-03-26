@@ -40,7 +40,7 @@ public class testPDF {
 	public void testKlausur() {
 		List<AbstractFrage> list = new ArrayList<AbstractFrage>();
 		
-		for(int i = 12; i >0; i--) {
+		for(int i = 5; i >0; i--) {
 			list.add(new Freitext("Test", Schwierigkeitsgrad.leicht, i, "TestSeminar", null));
 		}
 		

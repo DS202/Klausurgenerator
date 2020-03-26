@@ -23,7 +23,7 @@ public abstract class PDFCreator {
 	protected Document klausurDokument = new Document();
 	protected Klausur klausur;
 	protected List<AbstractFrage> fragenListe;
-	
+
 	protected int frageZahl = 1;
 
 	public void createKlausur(Klausur klausur) throws FileNotFoundException, DocumentException {
@@ -45,7 +45,21 @@ public abstract class PDFCreator {
 
 	private void addInhalt() {
 		int frageIndex = 1;
+		for (AbstractFrage frage : fragenListe) {
+			Paragraph frageParagraph = new Paragraph();
+			frageParagraph.add(new Paragraph(frageIndex + ") " + frage.getFrageText()));
+			addPunkte(frageParagraph, frage.getPunkte());
+			addAntwortElement(frageParagraph, frage);
+		}
+	}
 
+	protected abstract void addAntwortElement(Paragraph frageParagraph, AbstractFrage frage);
+
+	private void addPunkte(Paragraph frageParagraph, int punkte) {
+		Paragraph punkteParagraph = new Paragraph("(   /"+punkte+")");
+		punkteParagraph.setAlignment(Element.ALIGN_LEFT);
+		frageParagraph.add(punkteParagraph);
+		
 	}
 
 	private void addTitleBlatt() throws DocumentException {
@@ -54,7 +68,7 @@ public abstract class PDFCreator {
 
 		setEintragsZeile();
 
-		setLeerZeilen(15);
+		setLeerZeilen(26 - 2 * getDurchgeange());
 
 		setPunkteTabelle();
 
@@ -62,24 +76,23 @@ public abstract class PDFCreator {
 
 	private void setPunkteTabelle() throws DocumentException {
 		List<List<AbstractFrage>> subLists = getSubLists();
-		
+
 		for (List<AbstractFrage> list : subLists) {
 			setTeilTabelle(list);
 		}
 		setLeerZeilen(1);
-		
+
 		PdfPTable notenBildung = new PdfPTable(2);
 		notenBildung.addCell("Erreichte Punkte gesamt:");
 		notenBildung.addCell(" ");
 		notenBildung.addCell("Note:");
 		notenBildung.addCell(" ");
-		
+
 		klausurDokument.add(notenBildung);
 
 	}
 
 	private void setTeilTabelle(List<AbstractFrage> list) throws DocumentException {
-		
 
 		PdfPTable punkteTable = new PdfPTable(list.size() + 1);
 
@@ -114,12 +127,12 @@ public abstract class PDFCreator {
 	private List<List<AbstractFrage>> getSubLists() {
 		int listenGroesse = fragenListe.size();
 		int position = 0;
-		
+
 		List<List<AbstractFrage>> subLists = new ArrayList<List<AbstractFrage>>();
-		
-		for(int durchgaenge = getDurchgeange();durchgaenge>0;durchgaenge--) {
+
+		for (int durchgaenge = getDurchgeange(); durchgaenge > 0; durchgaenge--) {
 			List<AbstractFrage> list = new ArrayList<AbstractFrage>();
-			for(int zaehler = 0; zaehler<6;zaehler++) {
+			for (int zaehler = 0; zaehler < 6; zaehler++) {
 				if (position < listenGroesse) {
 					list.add(fragenListe.get(position));
 					position++;
@@ -129,6 +142,16 @@ public abstract class PDFCreator {
 		}
 
 		return subLists;
+	}
+
+	private void setEintragsZeile() throws DocumentException {
+		Font font = new Font(Font.FontFamily.TIMES_ROMAN, 16);
+
+		Paragraph eintrag = new Paragraph(
+				"\nName: ______________                                     Gruppe: ______\nDatum: _____________",
+				font);
+
+		klausurDokument.add(eintrag);
 	}
 
 	private int getDurchgeange() {
@@ -144,15 +167,6 @@ public abstract class PDFCreator {
 		for (int i = 0; i <= zeilen; i++) {
 			klausurDokument.add(new Paragraph(" "));
 		}
-	}
-
-	private void setEintragsZeile() throws DocumentException {
-		Font font = new Font(Font.FontFamily.TIMES_ROMAN, 16);
-
-		Paragraph eintrag = new Paragraph("\nName: ______________                                     Gruppe: ______\nDatum: _____________",
-				font);
-
-		klausurDokument.add(eintrag);
 	}
 
 	private void setTitel() throws DocumentException {

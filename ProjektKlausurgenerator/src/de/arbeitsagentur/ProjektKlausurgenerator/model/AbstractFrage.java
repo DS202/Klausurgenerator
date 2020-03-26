@@ -56,6 +56,10 @@ public abstract class AbstractFrage {
 		return seminar;
 	}
 
+	public Schwierigkeitsgrad getSchwierigkeitsgrad() {
+		return schwierigkeitsgrad;
+	}
+
 	public String toString() {
 		StringBuilder frageString = new StringBuilder(getFrageTyp());
 		setSeperator(frageString);
@@ -119,5 +123,5 @@ public abstract class AbstractFrage {
 
 	protected abstract Object getAntwort();
 
-	protected abstract String getFrageTyp();
+	public abstract String getFrageTyp();
 }
