@@ -9,6 +9,7 @@ public class Klausurgenerator extends PDFCreator {
 
 	@Override
 	protected String getPDFName() {
+
 		return klausur.getKlausurName()+".pdf";
 	}
 
@@ -18,8 +19,6 @@ public class Klausurgenerator extends PDFCreator {
 		if(frage.getFrageTyp().equals(Freitext.class.getSimpleName())) {
 			
 		}
-		
-		
 	}
 
 }
