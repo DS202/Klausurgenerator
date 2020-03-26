@@ -173,6 +173,7 @@ public class Hauptfenster {
 		mntmerstellen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Erstellen");
+				new FragenTabelleFenster();
 			}
 		});
 
