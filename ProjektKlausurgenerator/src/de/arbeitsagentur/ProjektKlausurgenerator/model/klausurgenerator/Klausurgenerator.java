@@ -11,6 +11,12 @@ import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.Freitext;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.MultiChoiceFrage;
 
+/**
+ * KLasse um die KLausuren zu generieren. Erbt von PDFCreator
+ * 
+ * @author DDJ
+ *
+ */
 public class Klausurgenerator extends PDFCreator {
 
 	@Override
@@ -33,7 +39,7 @@ public class Klausurgenerator extends PDFCreator {
 		}
 		if (frage.getFrageTyp().equals(MultiChoiceFrage.class.getSimpleName())) {
 			for (String moeglicheAntwort : ((MultiChoiceFrage) frage).getMoeglichAntworten()) {
-				frageParagraph.add(new Paragraph("[ ]  " + moeglicheAntwort));
+				frageParagraph.add(new Paragraph("[  ]  " + moeglicheAntwort));
 			}
 		}
 

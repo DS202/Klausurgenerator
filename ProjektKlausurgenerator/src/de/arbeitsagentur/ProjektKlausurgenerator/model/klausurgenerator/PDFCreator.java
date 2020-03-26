@@ -19,21 +19,29 @@ import com.itextpdf.text.pdf.PdfWriter;
 
 import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.Klausur;
-
+/**
+ * Abstracte Klasse um die Klausuren bzw. Lösungen zu erstellen
+ * @author DDJ
+ *
+ */
 public abstract class PDFCreator {
 
 	protected Document klausurDokument = new Document();
 	protected Klausur klausur;
 	protected List<AbstractFrage> fragenListe;
+	protected PdfWriter writer;
+	protected FootEvent footEvent = new FootEvent();
 
 	protected int frageZahl = 1;
 
 	public void createKlausur(Klausur klausur) throws DocumentException, MalformedURLException, IOException {
 		setClassVariables(klausur);
-		PdfWriter.getInstance(klausurDokument, new FileOutputStream(getPDFName()));
+		writer = PdfWriter.getInstance(klausurDokument, new FileOutputStream(getPDFName()));
+		writer.setPageEvent(footEvent);
 		klausurDokument.open();
 		addMetaDaten();
 		addTitleBlatt();
+		klausurDokument.newPage();
 		addInhalt();
 		klausurDokument.close();
 	}
@@ -53,17 +61,24 @@ public abstract class PDFCreator {
 			addPunkte(frageParagraph, frage.getPunkte());
 			addAntwortElement(frageParagraph, frage);
 			klausurDokument.add(frageParagraph);
+
+			if (frageIndex % 3 == 0) {
+				klausurDokument.newPage();
+
+			}
+
 			frageIndex++;
 		}
 	}
 
-	protected abstract void addAntwortElement(Paragraph frageParagraph, AbstractFrage frage) throws BadElementException, MalformedURLException, IOException;
+	protected abstract void addAntwortElement(Paragraph frageParagraph, AbstractFrage frage)
+			throws BadElementException, MalformedURLException, IOException;
 
 	private void addPunkte(Paragraph frageParagraph, int punkte) {
-		Paragraph punkteParagraph = new Paragraph("(   /"+punkte+")");
+		Paragraph punkteParagraph = new Paragraph("(   /" + punkte + ")");
 		punkteParagraph.setAlignment(Element.ALIGN_RIGHT);
 		frageParagraph.add(punkteParagraph);
-		
+
 	}
 
 	private void addTitleBlatt() throws DocumentException {

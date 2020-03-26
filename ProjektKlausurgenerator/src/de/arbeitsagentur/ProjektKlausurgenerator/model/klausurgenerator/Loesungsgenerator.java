@@ -10,20 +10,29 @@ import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.Freitext;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.MultiChoiceFrage;
 
+/**
+ * KLasse um die Lösungen zu generieren. Erbt von PDFCreator
+ * 
+ * @author DDJ
+ *
+ */
 public class Loesungsgenerator extends PDFCreator {
 
 	@Override
 	protected String getPDFName() {
-		return "Lösung "+klausur.getKlausurName() + ".pdf";
+		return "Lösung " + klausur.getKlausurName() + ".pdf";
 	}
 
 	@Override
 	protected void addAntwortElement(Paragraph frageParagraph, AbstractFrage frage)
 			throws BadElementException, MalformedURLException, IOException {
 		if (frage.getFrageTyp().equals(Freitext.class.getSimpleName())) {
-			for (int i = 1; i <= 3; i++) {
-
+			Paragraph loesung = new Paragraph();
+			for (String schluesselwort : ((Freitext) frage).getSchluesselwoerter()) {
+				loesung.add(schluesselwort);
+				loesung.add(", ");
 			}
+			frageParagraph.add(loesung);
 
 		}
 		if (frage.getFrageTyp().equals(MultiChoiceFrage.class.getSimpleName())) {
@@ -31,10 +40,11 @@ public class Loesungsgenerator extends PDFCreator {
 				if (moeglicheAntwort.equals(((MultiChoiceFrage) frage).getRichtigeAntwort())) {
 					frageParagraph.add(new Paragraph("[X]  " + moeglicheAntwort));
 				} else {
-					frageParagraph.add(new Paragraph("[ ]  " + moeglicheAntwort));
+					frageParagraph.add(new Paragraph("[  ]  " + moeglicheAntwort));
 				}
 			}
 
 		}
+		frageParagraph.add(new Paragraph(" "));
 	}
 }
