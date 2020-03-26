@@ -1,10 +1,12 @@
 package de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.itextpdf.text.BadElementException;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
@@ -26,7 +28,7 @@ public abstract class PDFCreator {
 
 	protected int frageZahl = 1;
 
-	public void createKlausur(Klausur klausur) throws FileNotFoundException, DocumentException {
+	public void createKlausur(Klausur klausur) throws DocumentException, MalformedURLException, IOException {
 		setClassVariables(klausur);
 		PdfWriter.getInstance(klausurDokument, new FileOutputStream(getPDFName()));
 		klausurDokument.open();
@@ -43,21 +45,23 @@ public abstract class PDFCreator {
 
 	protected abstract String getPDFName();
 
-	private void addInhalt() {
+	private void addInhalt() throws MalformedURLException, IOException, DocumentException {
 		int frageIndex = 1;
 		for (AbstractFrage frage : fragenListe) {
 			Paragraph frageParagraph = new Paragraph();
 			frageParagraph.add(new Paragraph(frageIndex + ") " + frage.getFrageText()));
 			addPunkte(frageParagraph, frage.getPunkte());
 			addAntwortElement(frageParagraph, frage);
+			klausurDokument.add(frageParagraph);
+			frageIndex++;
 		}
 	}
 
-	protected abstract void addAntwortElement(Paragraph frageParagraph, AbstractFrage frage);
+	protected abstract void addAntwortElement(Paragraph frageParagraph, AbstractFrage frage) throws BadElementException, MalformedURLException, IOException;
 
 	private void addPunkte(Paragraph frageParagraph, int punkte) {
 		Paragraph punkteParagraph = new Paragraph("(   /"+punkte+")");
-		punkteParagraph.setAlignment(Element.ALIGN_LEFT);
+		punkteParagraph.setAlignment(Element.ALIGN_RIGHT);
 		frageParagraph.add(punkteParagraph);
 		
 	}

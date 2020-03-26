@@ -2,6 +2,7 @@ package test;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +18,7 @@ import de.arbeitsagentur.ProjektKlausurgenerator.enums.Schwierigkeitsgrad;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.Freitext;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.Klausur;
+import de.arbeitsagentur.ProjektKlausurgenerator.model.MultiChoiceFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator.Klausurgenerator;
 
 public class testPDF {
@@ -43,12 +45,14 @@ public class testPDF {
 		for(int i = 5; i >0; i--) {
 			list.add(new Freitext("Test", Schwierigkeitsgrad.leicht, i, "TestSeminar", null));
 		}
+		String[] mA = {"Pokemon", "Pikachu", "Maunzi"};
+		list.add(new MultiChoiceFrage("Franchisename", Schwierigkeitsgrad.mittel, 5, "Test", "Pokemon", mA));
 		
 		Klausur klausur = new Klausur(100, "KlausurTest", list);
 		
 		try {
 			new Klausurgenerator().createKlausur(klausur);
-		} catch (FileNotFoundException | DocumentException e) {
+		} catch (DocumentException | IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
