@@ -9,17 +9,16 @@ public class Klausurgenerator extends PDFCreator {
 
 	@Override
 	protected String getPDFName() {
-		return klausur.getKlausurName()+".pdf";
+		return klausur.getKlausurName() + ".pdf";
 	}
 
 	@Override
 	protected void addAntwortElement(Paragraph frageParagraph, AbstractFrage frage) {
 
-		if(frage.getFrageTyp().equals(Freitext.class.getSimpleName())) {
-			//AddLinien PlanungsPhase
+		if (frage.getFrageTyp().equals(Freitext.class.getSimpleName())) {
+			// AddLinien PlanungsPhase
 		}
-		
-		
+
 	}
 
 }
