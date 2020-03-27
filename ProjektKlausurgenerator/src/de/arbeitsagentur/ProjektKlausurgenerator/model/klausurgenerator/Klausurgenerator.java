@@ -42,7 +42,7 @@ public class Klausurgenerator extends PDFCreator {
 		}
 
 		if (frage.getFrageTyp().equals(MultiChoiceFrage.class.getSimpleName())) {
-			for (String moeglicheAntwort : ((MultiChoiceFrage) frage).getMoeglichAntworten()) {
+			for (String[] moeglicheAntwort : ((MultiChoiceFrage) frage).getAntworten()) {
 				frageParagraph.add(new Paragraph("[  ]  " + moeglicheAntwort));
 			}
 		}

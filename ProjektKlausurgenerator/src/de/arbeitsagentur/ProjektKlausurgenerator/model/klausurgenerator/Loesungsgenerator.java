@@ -36,11 +36,11 @@ public class Loesungsgenerator extends PDFCreator {
 
 		}
 		if (frage.getFrageTyp().equals(MultiChoiceFrage.class.getSimpleName())) {
-			for (String moeglicheAntwort : ((MultiChoiceFrage) frage).getMoeglichAntworten()) {
-				if (moeglicheAntwort.equals(((MultiChoiceFrage) frage).getRichtigeAntwort())) {
-					frageParagraph.add(new Paragraph("[X]  " + moeglicheAntwort));
+			for (String[] moeglicheAntwort : ((MultiChoiceFrage) frage).getAntworten()) {
+				if (Boolean.valueOf(moeglicheAntwort[1])) {
+					frageParagraph.add(new Paragraph("[X]  " + moeglicheAntwort[0]));
 				} else {
-					frageParagraph.add(new Paragraph("[  ]  " + moeglicheAntwort));
+					frageParagraph.add(new Paragraph("[  ]  " + moeglicheAntwort[0]));
 				}
 			}
 
