@@ -1,7 +1,10 @@
 package de.arbeitsagentur.ProjektKlausurgenerator.controller;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
@@ -12,8 +15,8 @@ import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.Freitext;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.MultiChoiceFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.Klausur;
-import de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator.CsvCreator;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator.Klausurgenerator;
+import de.arbeitsagentur.ProjektKlausurgenerator.model.csvVerwaltung.CsvCreator;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.csvVerwaltung.fragenImporter;
 
 public class Controller {
@@ -51,9 +54,31 @@ public class Controller {
 		return fragenImporter.importFragen(); 
 	}
 	
-	public List<AbstractFrage> bearbeiteKlausur(File csvInput) {
+	public List<AbstractFrage> bearbeiteKlausur(File csvInput) throws Exception {
+		String zeile;
 		
+		if (csvInput.getName().contains(".csv")) {
 		
+				BufferedReader csvReader = new BufferedReader(new FileReader(csvInput));
+				while ((zeile = csvReader.readLine()) != null) {
+					String[] zeilenDaten = zeile.split(";");
+					
+					if (zeilenDaten[0].equals(Freitext.class.getName())) {
+						
+					} else if (zeilenDaten[0].equals(MultiChoiceFrage.class.getName())) {
+						
+					} else {
+						throw new Exception("ERROR: Fehlerhafte Zeile in der Datei: " + csvInput);
+					}
+						
+				}
+				csvReader.close();
+				
+		} else if(csvInput.getName().contains(".pdf")) {
+			
+		} else {
+			return null;
+		}
 		
 		//TODO
 		//1. Validation if File is compatible

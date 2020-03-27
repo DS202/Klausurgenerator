@@ -1,4 +1,4 @@
-package de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator;
+package de.arbeitsagentur.ProjektKlausurgenerator.model.csvVerwaltung;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -40,6 +40,8 @@ public class CsvCreator {
 	}
 	
 	private void addFreiTextCsv(Freitext freiText) throws IOException {
+		newCsvDatei.append(freiText.getFrageTyp());
+		newCsvDatei.append(DEFAULT__SEPARATOR);
 		newCsvDatei.append(freiText.getFrageText());
 		newCsvDatei.append(DEFAULT__SEPARATOR);
 		newCsvDatei.append(freiText.getSchwierigkeitsgrad().toString());
@@ -58,6 +60,8 @@ public class CsvCreator {
 	}
 	
 	private void addMultiChoiceFrageCsv(MultiChoiceFrage multiChoiceFrage) throws IOException {
+		newCsvDatei.append(multiChoiceFrage.getFrageTyp());
+		newCsvDatei.append(DEFAULT__SEPARATOR);
 		newCsvDatei.append(multiChoiceFrage.getFrageText());
 		newCsvDatei.append(DEFAULT__SEPARATOR);
 		newCsvDatei.append(multiChoiceFrage.getSchwierigkeitsgrad().toString());
