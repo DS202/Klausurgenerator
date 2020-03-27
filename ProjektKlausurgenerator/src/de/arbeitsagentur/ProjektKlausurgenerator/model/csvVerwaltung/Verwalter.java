@@ -8,4 +8,8 @@ public class Verwalter {
 		super();
 	}
 
+	public static String getCsvFile() {
+		return csvFile;
+	}
+	
 }

@@ -17,10 +17,12 @@ import de.arbeitsagentur.ProjektKlausurgenerator.model.MultiChoiceFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.Klausur;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator.Klausurgenerator;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.csvVerwaltung.CsvCreator;
+import de.arbeitsagentur.ProjektKlausurgenerator.model.csvVerwaltung.Verwalter;
+import de.arbeitsagentur.ProjektKlausurgenerator.model.csvVerwaltung.fragenExporter;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.csvVerwaltung.fragenImporter;
 
 public class Controller {
-	private List<AbstractFrage> endgueltigeKlausurListeAbstractFrages;
+	private List<AbstractFrage> endgueltigeKlausurListeAbstractFragen;
 	
 	
 	public boolean erstelleFreitextFrage(String frage, Schwierigkeitsgrad schwierigkeitsgrad, int punkte, String seminar, String[] schluesselwoerter) {
@@ -30,64 +32,44 @@ public class Controller {
 						|| schluesselwoerter.equals(null)) {
 				return false;
 		} else {
-			List<AbstractFrage> fragenListe = fragenImporter.importFragen();
+			List<AbstractFrage> fragenListe = fragenImporter.importFragen(Verwalter.getCsvFile());
 			fragenListe.set(fragenListe.size(), new Freitext(frage, schwierigkeitsgrad, punkte, seminar, schluesselwoerter));
 			return true;
 		}
 	}
 	
-	public boolean erstelleMultiChoiceFrage(String frage, Schwierigkeitsgrad schwierigkeitsgrad, int punkte, String seminar, String rAntwort ,String[] antworten) {
+	public boolean erstelleMultiChoiceFrage(String frage, Schwierigkeitsgrad schwierigkeitsgrad, int punkte, String seminar, String rAntwort ,String[][] antworten) {
 		if (frage.isEmpty()
 				|| punkte <= 0
 					|| seminar.isEmpty()
 						|| rAntwort.isEmpty()
-							|| antworten.length < 5) {
+							|| antworten.length < 5 || antworten.length > 5) { //1stelle antwort und zweite stelle ist boolean
 				return false;
 		} else {
-			List<AbstractFrage> fragenListe = fragenImporter.importFragen();
-			fragenListe.set(fragenListe.size(), new MultiChoiceFrage(frage, schwierigkeitsgrad, punkte, seminar, rAntwort, antworten));
+			List<AbstractFrage> fragenListe = fragenImporter.importFragen(Verwalter.getCsvFile());
+			fragenListe.set(fragenListe.size(), new MultiChoiceFrage(frage, schwierigkeitsgrad, punkte, seminar, antworten));
 			return true;
 		}
 	}
 	
 	public List<AbstractFrage> getAlleFragen() {
-		return fragenImporter.importFragen(); 
+		return fragenImporter.importFragen(Verwalter.getCsvFile()); 
 	}
 	
-	public List<AbstractFrage> bearbeiteKlausur(File csvInput) throws Exception {
-		String zeile;
+	public List<AbstractFrage> bearbeiteKlausur(File csvInput) throws Exception {	
+
+		String dateiName = csvInput.toPath().getFileName().toString();
 		
-		if (csvInput.getName().contains(".csv")) {
-		
-				BufferedReader csvReader = new BufferedReader(new FileReader(csvInput));
-				while ((zeile = csvReader.readLine()) != null) {
-					String[] zeilenDaten = zeile.split(";");
-					
-					if (zeilenDaten[0].equals(Freitext.class.getName())) {
-						
-					} else if (zeilenDaten[0].equals(MultiChoiceFrage.class.getName())) {
-						
-					} else {
-						throw new Exception("ERROR: Fehlerhafte Zeile in der Datei: " + csvInput);
-					}
-						
-				}
-				csvReader.close();
-				
-		} else if(csvInput.getName().contains(".pdf")) {
+		if (dateiName.contains(".csv")) {
+			List<AbstractFrage> fragenListe = fragenImporter.importFragen(dateiName);	
 			
+			return fragenListe;
 		} else {
 			return null;
 		}
-		
-		//TODO
-		//1. Validation if File is compatible
-		//2. Convert File in List
-		
-		return null;
 	}
 	
-	private void erstelleKlausur(Klausur klausur) {
+	public void erstelleKlausur(Klausur klausur) throws Exception {
 		int anzahlPunkte = klausur.getPunkte();
 		List<AbstractFrage> fragenList = klausur.getFragenList();
 		int aktuelleGesamtpunkte = 0;
@@ -111,12 +93,12 @@ public class Controller {
 		}
 		
 		for (int i = 0; i < listPostion; i++) {
-			endgueltigeKlausurListeAbstractFrages.add(fragenList.get(i));
+			endgueltigeKlausurListeAbstractFragen.add(fragenList.get(i));
 		}
 		
 		try {
-			new Klausurgenerator().createKlausur(new Klausur(anzahlPunkte, klausur.getKlausurName(), endgueltigeKlausurListeAbstractFrages));
-			new CsvCreator().createCsvDatei(anzahlPunkte, klausur.getKlausurName(), endgueltigeKlausurListeAbstractFrages);
+			new Klausurgenerator().createKlausur(new Klausur(anzahlPunkte, klausur.getKlausurName(), endgueltigeKlausurListeAbstractFragen));
+			fragenExporter.exportKlausur(anzahlPunkte, klausur.getKlausurName(), endgueltigeKlausurListeAbstractFragen);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (DocumentException e) {

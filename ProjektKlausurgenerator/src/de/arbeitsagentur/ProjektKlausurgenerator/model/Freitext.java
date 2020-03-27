@@ -52,6 +52,4 @@ public class Freitext extends AbstractFrage {
 		return this.getClass().getSimpleName();
 	}
 	
-	
-
 }
