@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Arrays;
 import java.util.Vector;
 
 import javax.swing.JButton;
@@ -21,11 +20,11 @@ public class FragenTabelleFenster {
 	private JPanel panel;
 	private JTable table;
 	private JScrollPane scrollPane;
-	private final static DefaultTableModel unchangedModell = new DefaultTableModel(new Object[][] { { null, null, null, null, null },
+	private final static DefaultTableModel unchangedModell = new DefaultTableModel(new Object[][] {
 			{ null, null, null, null, null }, { null, null, null, null, null }, { null, null, null, null, null },
 			{ null, null, null, null, null }, { null, null, null, null, null }, { null, null, null, null, null },
 			{ null, null, null, null, null }, { null, null, null, null, null }, { null, null, null, null, null },
-			{ null, null, null, null, null }, { null, null, null, null, null }, },
+			{ null, null, null, null, null }, { null, null, null, null, null }, { null, null, null, null, null }, },
 			new String[] { "Frage", "Kategorie", "Schwierigkeit", "Lösung", "ZYX" });
 
 	private DefaultTableModel modell = rewriteModell(unchangedModell);
@@ -86,7 +85,7 @@ public class FragenTabelleFenster {
 				modell = rewriteModell(unchangedModell);
 
 				ausgabe(unchangedModell);
-				
+
 				initTable(modell);
 			}
 		});
@@ -108,31 +107,30 @@ public class FragenTabelleFenster {
 	private DefaultTableModel rewriteModell(DefaultTableModel data) {
 		DefaultTableModel modell = null;
 
-		Vector<String> vector = new Vector<String>();
-		vector.addAll(Arrays.asList(new String[] { "Frage", "Kategorie", "Schwierigkeit", "Lösung", "ZYX" }));
-		modell = new DefaultTableModel(data.getDataVector(), vector); // Zuruecksetzen des Modells
+//		Vector<String> vector = new Vector<String>();
+//		vector.addAll(Arrays.asList(new String[] { "Frage", "Kategorie", "Schwierigkeit", "Lösung", "ZYX" }));
+//		modell = new DefaultTableModel(data.getDataVector(), vector); // Zuruecksetzen des Modells
 
-//		modell = new DefaultTableModel(new Object[][] { { null, null, null, null, null },
-//				{ null, null, null, null, null }, { null, null, null, null, null }, { null, null, null, null, null },
-//				{ null, null, null, null, null }, { null, null, null, null, null }, { null, null, null, null, null },
-//				{ null, null, null, null, null }, { null, null, null, null, null }, { null, null, null, null, null },
-//				{ null, null, null, null, null }, { null, null, null, null, null }, },
-//				new String[] { "Frage", "Kategorie", "Schwierigkeit", "Lösung", "ZYX" });
+		modell = new DefaultTableModel(new Object[][] { { null, null, null, null, null },
+				{ null, null, null, null, null }, { null, null, null, null, null }, { null, null, null, null, null },
+				{ null, null, null, null, null }, { null, null, null, null, null }, { null, null, null, null, null },
+				{ null, null, null, null, null }, { null, null, null, null, null }, { null, null, null, null, null },
+				{ null, null, null, null, null }, { null, null, null, null, null }, },
+				new String[] { "Frage", "Kategorie", "Schwierigkeit", "Lösung", "ZYX" });
 
 		return modell;
 	}
-	
+
 	private void ausgabe(DefaultTableModel data) {
-		
-		Vector<Vector<String>> vector =data.getDataVector();
-		
+
+		Vector<Vector<String>> vector = data.getDataVector();
+
 		for (int i = 0; i < vector.size(); i++) {
 			for (int j = 0; j < vector.get(i).size(); j++) {
 				System.out.println(vector.get(i).get(j));
 			}
-			
 		}
-		
+
 	}
-	
+
 }

@@ -1,14 +1,12 @@
 package de.arbeitsagentur.ProjektKlausurgenerator.Oberflaeche;
 
 import java.awt.Font;
-import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.net.URL;
-import java.util.Date;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -31,6 +29,7 @@ public class Hauptfenster {
 	public Hauptfenster() {
 		initialize();
 		initMenue();
+		initButtons();
 
 		frame.setVisible(true);
 	}
@@ -53,21 +52,20 @@ public class Hauptfenster {
 		lblPrfungsgenerierertool.setFont(new Font("Tahoma", Font.PLAIN, 25));
 		lblPrfungsgenerierertool.setBounds(293, 33, 278, 31);
 		panel.add(lblPrfungsgenerierertool);
+		
+		// Unter-Ueberschrift
+		JLabel lblKlausur = new JLabel("<html><u><b>Klausur:</u></b></html>");
+		lblKlausur.setFont(new Font("Arial", Font.PLAIN, 12));
+		lblKlausur.setBounds(10, 530, 74, 15);
+		panel.add(lblKlausur);
 
 		// Label-Bild
-		URL imageUrl = Hauptfenster.class.getClassLoader().getResource("images/pruefungIcon.PNG");
-		// Fängt im Ordner /resources/ an.
-		// imageUrl = this.getClass().getResource("images/pruefungIcon.PNG");
-		// -> Geht nicht.
-		ImageIcon imageIcon = new ImageIcon(imageUrl); // Bild
-		// laden
-		Image image = imageIcon.getImage(); // umwandeln
-		Image newimg = image.getScaledInstance(400, 350, java.awt.Image.SCALE_SMOOTH); // smooth Skalieren
-		imageIcon = new ImageIcon(newimg); // zurueck umwandeln
-		// TODO:
+		ImageIcon imageIcon = GuiUtils.getScaledImageIcon("images/pruefungIcon2.PNG", 350, 440);
+
 		JLabel lblBild = new JLabel();
 		lblBild.setIcon(imageIcon);
-		lblBild.setBounds(220, 75, 400, 350);
+//		lblBild.setBounds(220, 75, 400, 350);
+		lblBild.setBounds(265, 75, 350, 440);
 		panel.add(lblBild);
 
 		// Statusleiste
@@ -77,8 +75,8 @@ public class Hauptfenster {
 		panel.add(panelStatusleiste);
 		panelStatusleiste.setLayout(null);
 
-		JLabel lblDatum = new JLabel("Datum:" + new Date());
-		lblDatum.setBounds(631, 0, 269, 18);
+		JLabel lblDatum = new JLabel(GuiUtils.holeAktuellesDatum());
+		lblDatum.setBounds(748, 0, 152, 18);
 		panelStatusleiste.add(lblDatum);
 	}
 
@@ -94,8 +92,9 @@ public class Hauptfenster {
 		mntmFrageHinzuefgen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Hilfe anzeigen");
-				JOptionPane.showMessageDialog(null, "Prüfungstool der Gruppe F18", "Hilfe",
-						JOptionPane.INFORMATION_MESSAGE);
+//				JOptionPane.showMessageDialog(null, "Prüfungstool der Gruppe F18", "Hilfe",
+//						JOptionPane.INFORMATION_MESSAGE);
+				new HilfeFenster();
 			}
 		});
 
@@ -116,64 +115,25 @@ public class Hauptfenster {
 		mntmimportieren.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				JFileChooser chooser = new JFileChooser();
-				FileFilter filter = new FileNameExtensionFilter("csv", "CSV");
+				aktionImport();
 
-				chooser.setFileFilter(filter); // Filepicker auf CSV einschraenken
-				chooser.showDialog(null, "Klausur auswählen");
-
-				File file = chooser.getSelectedFile();
-				if (file != null) {
-					if (file.exists()) {
-						// TODO:Uebergabe an Logik!
-						System.out.println("Übergabe an Logik" + "   " + file.getAbsolutePath());
-					}else {
-						JOptionPane.showMessageDialog(null, "Ausgewählte Datei existiert nicht.", "Error",
-								JOptionPane.ERROR_MESSAGE);
-					}
-
-				}
 			}
 		});
 
 		JMenuItem mntmexportieren = new JMenuItem("...Exportieren");
 		mntmexportieren.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JFileChooser fileChooser = new JFileChooser();
-				fileChooser.setDialogTitle("Specify a file to save");
-				fileChooser.setAcceptAllFileFilterUsed(false);// deaktiviert "eigene Datei" Auswahlmoeglickeit
 
-				FileFilter filtercsv = new FileNameExtensionFilter("CSV", "csv");
-				FileFilter filterpdf = new FileNameExtensionFilter("PDF", "pdf");
+				aktionExport();
 
-				fileChooser.addChoosableFileFilter(filtercsv);
-				fileChooser.addChoosableFileFilter(filterpdf);
-
-				int userSelection = fileChooser.showSaveDialog(frame);
-
-				if (userSelection == JFileChooser.APPROVE_OPTION) {
-
-					File fileToSave = fileChooser.getSelectedFile();
-					FileFilter filter = fileChooser.getFileFilter();
-					Filetype type = null;
-
-					if (filter.equals(filtercsv)) {
-						type = Filetype.CSV;
-					} else {
-						type = Filetype.PDF;
-					}
-
-					// TODO:File speichern nach erhalt von Logik
-					System.out.println("Save as file: " + fileToSave.getAbsolutePath() + "." + type);
-				}
 			}
 		});
 
 		JMenuItem mntmerstellen = new JMenuItem("...Erstellen");
 		mntmerstellen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Erstellen");
-				new FragenTabelleFenster();
+
+				aktionErstellen();
 			}
 		});
 
@@ -181,4 +141,94 @@ public class Hauptfenster {
 		mnKlausur.add(mntmimportieren);
 		mnKlausur.add(mntmerstellen);
 	}
+
+	private void initButtons() {
+
+		JButton btnErstellen = new JButton("Erstellen");
+		btnErstellen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				aktionErstellen();
+			}
+		});
+		btnErstellen.setBounds(80, 560, 125, 23);
+		panel.add(btnErstellen);
+
+		JButton buttonImportieren = new JButton("Importieren");
+		buttonImportieren.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				aktionImport();
+			}
+		});
+		buttonImportieren.setBounds(380, 560, 125, 23);
+		panel.add(buttonImportieren);
+
+		JButton buttonExportieren = new JButton("Exportieren");
+		buttonExportieren.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				aktionExport();
+			}
+		});
+		buttonExportieren.setBounds(700, 560, 125, 23);
+		panel.add(buttonExportieren);
+	}
+
+	// *** Aktionen Export / Import / Erstellen *** //
+
+	private void aktionExport() {
+
+		JFileChooser fileChooser = new JFileChooser();
+		fileChooser.setDialogTitle("Speicherort Festlegen");
+		fileChooser.setAcceptAllFileFilterUsed(false);// deaktiviert "eigene Datei" Auswahlmoeglickeit
+
+		FileFilter filtercsv = new FileNameExtensionFilter("CSV", "csv");
+		FileFilter filterpdf = new FileNameExtensionFilter("PDF", "pdf");
+
+		fileChooser.addChoosableFileFilter(filtercsv);
+		fileChooser.addChoosableFileFilter(filterpdf);
+
+		int userSelection = fileChooser.showSaveDialog(frame);
+
+		if (userSelection == JFileChooser.APPROVE_OPTION) {
+
+			File fileToSave = fileChooser.getSelectedFile();
+			FileFilter filter = fileChooser.getFileFilter();
+			Filetype type = null;
+
+			if (filter.equals(filtercsv)) {
+				type = Filetype.CSV;
+			} else {
+				type = Filetype.PDF;
+			}
+
+			// TODO:File speichern nach Erhalt von Logik
+			System.out.println("Save as file: " + fileToSave.getAbsolutePath() + "." + type);
+		}
+	}
+
+	private void aktionImport() {
+
+		JFileChooser chooser = new JFileChooser();
+		FileFilter filter = new FileNameExtensionFilter("csv", "CSV");
+
+		chooser.setFileFilter(filter); // Filepicker auf CSV einschraenken
+		chooser.showDialog(null, "Klausur auswählen");
+
+		File file = chooser.getSelectedFile();
+		if (file != null) {
+			if (file.exists()) {
+				// TODO:Uebergabe an Logik!
+				System.out.println("Übergabe an Logik" + "   " + file.getAbsolutePath());
+			} else {
+				JOptionPane.showMessageDialog(null, "Ausgewählte Datei existiert nicht.", "Error",
+						JOptionPane.ERROR_MESSAGE);
+			}
+		}
+	}
+
+	private void aktionErstellen() {
+
+		System.out.println("Erstellen");
+		new FragenTabelleFenster();
+	}
+
 }
