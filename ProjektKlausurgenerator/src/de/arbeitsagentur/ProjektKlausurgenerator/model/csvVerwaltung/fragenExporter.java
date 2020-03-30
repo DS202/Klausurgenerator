@@ -25,5 +25,25 @@ public class fragenExporter extends Verwalter {
 		writer.close();
 
 	}
+	
+	public static boolean exportKlausur(int anzahlPunkte, String klausurName, List<AbstractFrage> fragenListe) throws Exception {
+		if (klausurName.isEmpty()) {
+			klausurName = "neueKlausur";
+		} else if(anzahlPunkte <= 0
+					|| fragenListe.isEmpty()) {
+			return false;
+		}
+		
+		FileWriter writer = new FileWriter(klausurName + ".csv");
+		
+		for (AbstractFrage frage : fragenListe) {
+			writer.append(frage.toString());
+			writer.append(System.getProperty("line.separator"));
+		}
+
+		writer.flush();
+		writer.close();
+		return true;
+	}
 
 }

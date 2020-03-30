@@ -15,15 +15,20 @@ import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
  */
 public class fragenImporter extends Verwalter {
 	
-	public static List<AbstractFrage> importFragen() {
+	public static List<AbstractFrage> importFragen(String csvDatei) {
 		BufferedReader br = null;
 		String line = "";
 		
 		List<AbstractFrage> fragen = new ArrayList<AbstractFrage>();
 
 		try {
+			
+			if (csvDatei.equals(csvFile)) {
+				br = new BufferedReader(new FileReader(csvFile));
+			} else {
+				br = new BufferedReader(new FileReader(csvDatei));
+			}
 
-			br = new BufferedReader(new FileReader(csvFile));
 			while ((line = br.readLine()) != null) {
 				AbstractFrage frage = AbstractFrage.getFrage(line);
 				fragen.add(frage);

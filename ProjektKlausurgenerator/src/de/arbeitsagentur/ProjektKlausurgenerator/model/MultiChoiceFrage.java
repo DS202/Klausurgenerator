@@ -6,8 +6,8 @@ import java.util.List;
 import de.arbeitsagentur.ProjektKlausurgenerator.enums.Schwierigkeitsgrad;
 
 /**
- * Klasse für Multiple-Choice Fragen.
- * 
+ * Klasse fÃ¼r Multiple-Choice Fragen.
+
  * @author DDJ
  *
  */
@@ -16,7 +16,7 @@ public class MultiChoiceFrage extends AbstractFrage {
 	private String[][] antworten;
 
 	/**
-	 * Basiskonstruktor für Benutzereingaben
+	 * Basiskonstruktor fÃ¼r Benutzereingaben
 	 * 
 	 * @param frage
 	 * @param schwierigkeitsgrad
@@ -54,12 +54,14 @@ public class MultiChoiceFrage extends AbstractFrage {
 		return antworten;
 	}
 
+
 	@Override
 	protected Object getAntwort() {
 		StringBuilder antworten = new StringBuilder();
+		
+		for(String[] antwort : this.antworten) {
+			antworten.append("\"" + antwort[0] + "\"");
 
-		for (String[] antwort : this.antworten) {
-			antworten.append(antwort[0]);
 			setSeperator(antworten);
 			antworten.append(antwort[1]);
 		}

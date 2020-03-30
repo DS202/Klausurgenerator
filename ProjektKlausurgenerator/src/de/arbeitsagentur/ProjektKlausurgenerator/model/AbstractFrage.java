@@ -64,7 +64,7 @@ public abstract class AbstractFrage {
 		StringBuilder frageString = new StringBuilder(getFrageTyp());
 		setSeperator(frageString);
 
-		frageString.append(frageText);
+		frageString.append("\"" + frageText + "\"");
 		setSeperator(frageString);
 
 		frageString.append(schwierigkeitsgrad.toString());
@@ -91,7 +91,7 @@ public abstract class AbstractFrage {
 	 * @return
 	 */
 	private static String getSeperator() {
-		return "\t";
+		return ";";
 	}
 
 	/**
@@ -112,6 +112,11 @@ public abstract class AbstractFrage {
 		return null;
 	}
 
+	protected String entfernerApostroph(String strStream) {
+			strStream = strStream.replaceAll("\"", "");
+		return strStream;
+	}
+	
 	protected String[] antwortSplitter(String[] rawFrage, int startPunkt) {
 		List<String> antwortListe = new ArrayList<String>();
 		for (int position = startPunkt; position < rawFrage.length; position++) {
