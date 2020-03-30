@@ -1,5 +1,6 @@
 package de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator;
 
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -35,16 +36,28 @@ public abstract class PDFCreator {
 
 	protected int frageZahl = 1;
 
-	public void createKlausur(Klausur klausur) throws DocumentException, MalformedURLException, IOException {
-		setClassVariables(klausur);
-		writer = PdfWriter.getInstance(klausurDokument, new FileOutputStream(getPDFName()));
-		writer.setPageEvent(footEvent);
-		klausurDokument.open();
-		addMetaDaten();
-		addTitleBlatt();
-		klausurDokument.newPage();
-		addInhalt();
-		klausurDokument.close();
+	public boolean createKlausur(Klausur klausur) {
+		try {
+			setClassVariables(klausur);
+			writer = PdfWriter.getInstance(klausurDokument, new FileOutputStream(getPDFName()));
+			writer.setPageEvent(footEvent);
+			klausurDokument.open();
+			addMetaDaten();
+			addTitleBlatt();
+			klausurDokument.newPage();
+			addInhalt();
+			klausurDokument.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+			return false;
+		} catch (DocumentException e) {
+			e.printStackTrace();
+			return false;
+		} catch (IOException e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
 	}
 
 	protected void setClassVariables(Klausur klausur) {
