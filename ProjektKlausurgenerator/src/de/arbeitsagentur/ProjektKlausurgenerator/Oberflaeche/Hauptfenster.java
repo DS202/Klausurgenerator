@@ -38,6 +38,7 @@ public class Hauptfenster {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 915, 675);
 		frame.setLocationRelativeTo(null);
+		frame.setResizable(false);
 		frame.setTitle("Prüfungstool  || " + System.getProperty("user.name"));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -64,7 +65,6 @@ public class Hauptfenster {
 
 		JLabel lblBild = new JLabel();
 		lblBild.setIcon(imageIcon);
-//		lblBild.setBounds(220, 75, 400, 350);
 		lblBild.setBounds(265, 75, 350, 440);
 		panel.add(lblBild);
 
@@ -87,6 +87,14 @@ public class Hauptfenster {
 
 		JMenu mnMenue = new JMenu("Men\u00FC");
 		menuBar.add(mnMenue);
+		
+		JMenuItem mntmFragehinzufgen = new JMenuItem("FrageHinzuf\u00FCgen");
+		mntmFragehinzufgen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new EinzelneFrageHinzuFenster();
+			}
+		});
+		mnMenue.add(mntmFragehinzufgen);
 
 		JMenuItem mntmFrageHinzuefgen = new JMenuItem("Hilfe");
 		mntmFrageHinzuefgen.addActionListener(new ActionListener() {
