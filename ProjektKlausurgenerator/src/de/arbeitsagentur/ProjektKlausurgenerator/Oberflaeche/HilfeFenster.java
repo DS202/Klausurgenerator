@@ -28,7 +28,7 @@ public class HilfeFenster {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 435, 630);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		frame.setResizable(true);
+		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
 		frame.setTitle("Hilfe Klausurtool");
 		frame.getContentPane().setLayout(null);

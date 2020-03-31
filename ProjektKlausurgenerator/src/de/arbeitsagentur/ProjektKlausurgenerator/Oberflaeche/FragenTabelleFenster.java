@@ -42,6 +42,7 @@ public class FragenTabelleFenster {
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		frame.setTitle("Fragentabelle");
+		frame.setResizable(false);
 		frame.getContentPane().setLayout(null);
 
 		panel = new JPanel();
