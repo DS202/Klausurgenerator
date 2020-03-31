@@ -16,6 +16,7 @@ import de.arbeitsagentur.ProjektKlausurgenerator.model.Freitext;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.MultiChoiceFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.Klausur;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator.Klausurgenerator;
+import de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator.Loesungsgenerator;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.csvVerwaltung.CsvCreator;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.csvVerwaltung.Verwalter;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.csvVerwaltung.fragenExporter;
@@ -95,10 +96,12 @@ public class Controller {
 		for (int i = 0; i < listPostion; i++) {
 			endgueltigeKlausurListeAbstractFragen.add(fragenList.get(i));
 		}
+		Klausur berechneteKlausur = new Klausur(anzahlPunkte, klausur.getKlausurName(), endgueltigeKlausurListeAbstractFragen);
 		
 		try {
-			new Klausurgenerator().createKlausur(new Klausur(anzahlPunkte, klausur.getKlausurName(), endgueltigeKlausurListeAbstractFragen));
+			new Klausurgenerator().createKlausur(berechneteKlausur);
 			fragenExporter.exportKlausur(anzahlPunkte, klausur.getKlausurName(), endgueltigeKlausurListeAbstractFragen);
+			new Loesungsgenerator().createKlausur(berechneteKlausur);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (DocumentException e) {
