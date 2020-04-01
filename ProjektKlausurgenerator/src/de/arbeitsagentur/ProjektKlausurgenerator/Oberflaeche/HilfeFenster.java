@@ -35,7 +35,7 @@ public class HilfeFenster {
 
 		panel = new JPanel();
 		panel.setBackground(Color.WHITE);
-		panel.setBounds(0, 0, 419, 591);
+		panel.setBounds(0, 0, 429, 601);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 

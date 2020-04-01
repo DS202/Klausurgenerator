@@ -44,7 +44,7 @@ public class Hauptfenster {
 		frame.getContentPane().setLayout(null);
 
 		panel = new JPanel();
-		panel.setBounds(0, 0, 899, 635);
+		panel.setBounds(0, 0, 909, 646);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 
@@ -71,18 +71,19 @@ public class Hauptfenster {
 		// Statusleiste
 		JPanel panelStatusleiste = new JPanel();
 		panelStatusleiste.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		panelStatusleiste.setBounds(0, 615, 900, 21);
+		panelStatusleiste.setBounds(0, 625, 915, 20);
 		panel.add(panelStatusleiste);
 		panelStatusleiste.setLayout(null);
 
 		JLabel lblDatum = new JLabel(GuiUtils.holeAktuellesDatum());
+		lblDatum.setFont(new Font("Arial", Font.PLAIN, 12));
 		lblDatum.setBounds(748, 0, 152, 18);
 		panelStatusleiste.add(lblDatum);
 	}
 
 	private void initMenue() {
 		JMenuBar menuBar = new JMenuBar();
-		menuBar.setBounds(0, 0, 900, 21);
+		menuBar.setBounds(0, 0, 915, 21);
 		panel.add(menuBar);
 
 		JMenu mnMenue = new JMenu("Men\u00FC");
