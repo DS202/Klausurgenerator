@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -28,7 +29,7 @@ public class EinzelneFrageHinzuFenster {
 	private JTextField textFieldFrage;
 	private JTextField txtSeminar;
 	private String letzterFragenTyp = "Multichoice";
-	
+
 	private JTextField textField_1Antwort;
 	private JTextField textField_2Antwort;
 	private JTextField textField_3Antwort;
@@ -52,7 +53,7 @@ public class EinzelneFrageHinzuFenster {
 
 		panel = new JPanel();
 		panel.setBackground(Color.WHITE);
-		panel.setBounds(0, 0, 424, 551);
+		panel.setBounds(0, 0, 434, 561);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 
@@ -150,7 +151,7 @@ public class EinzelneFrageHinzuFenster {
 		btnSpeichern.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
-				if (!txtSeminar.getText().isEmpty() && !textFieldFrage.getText().isEmpty()) {					
+				if (!txtSeminar.getText().isEmpty() && !textFieldFrage.getText().isEmpty()) {
 					System.out.println("Frage Speichern");
 					// TODO: Einzelne Frage Speichern in CSV --> Logik!!
 					JOptionPane.showMessageDialog(null, "Prüfungsfrage erfolgreich gespeichert.", "Speichern",

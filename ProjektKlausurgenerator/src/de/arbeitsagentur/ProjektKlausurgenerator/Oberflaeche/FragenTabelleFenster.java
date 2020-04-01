@@ -47,7 +47,7 @@ public class FragenTabelleFenster {
 
 		panel = new JPanel();
 		panel.setBackground(Color.WHITE);
-		panel.setBounds(0, 0, 899, 636);
+		panel.setBounds(0, 0, 909, 646);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 
@@ -97,10 +97,12 @@ public class FragenTabelleFenster {
 	private void initTable(DefaultTableModel modell) {
 		// Tabelle
 		scrollPane = new JScrollPane();
-		scrollPane.setBounds(10, 90, 879, 474);
+		scrollPane.setBounds(10, 90, 889, 474);
+		scrollPane.setBackground(Color.white);
 		panel.add(scrollPane);
 
 		table = new JTable();
+		table.setBackground(Color.white);
 		scrollPane.setViewportView(table);
 		table.setModel(modell);
 	}

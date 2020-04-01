@@ -1,14 +1,13 @@
 package de.arbeitsagentur.ProjektKlausurgenerator;
 
-import test.testPDF;
+import de.arbeitsagentur.ProjektKlausurgenerator.Oberflaeche.Hauptfenster;
 
 public class Start {
 
 	public static void main(String[] args) {
 
-		// Start des Programmes
-		new testPDF().testKlausur();
+		//Hauptfenster Starten
+		new Hauptfenster();
 
 	}
-
 }
