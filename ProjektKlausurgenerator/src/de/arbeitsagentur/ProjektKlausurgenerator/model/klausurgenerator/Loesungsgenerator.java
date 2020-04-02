@@ -4,11 +4,10 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 
 import com.itextpdf.text.BadElementException;
-import com.itextpdf.text.Paragraph;
-
 import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.Freitext;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.MultiChoiceFrage;
+import de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator.subModel.KlausurParagraph;
 
 /**
  * KLasse um die Lösungen zu generieren. Erbt von PDFCreator
@@ -24,27 +23,30 @@ public class Loesungsgenerator extends PDFCreator {
 	}
 
 	@Override
-	protected void addAntwortElement(Paragraph frageParagraph, AbstractFrage frage)
+	protected void addAntwortElement(KlausurParagraph frageParagraph, AbstractFrage frage)
 			throws BadElementException, MalformedURLException, IOException {
 		if (frage.getFrageTyp().equals(Freitext.class.getSimpleName())) {
-			Paragraph loesung = new Paragraph();
+			KlausurParagraph loesung = new KlausurParagraph();
 			for (String schluesselwort : ((Freitext) frage).getSchluesselwoerter()) {
-				loesung.add(schluesselwort);
-				loesung.add(", ");
+				loesung.addText(schluesselwort+", ");
 			}
-			frageParagraph.add(loesung);
+			frageParagraph.addParagraph(loesung);
 
 		}
 		if (frage.getFrageTyp().equals(MultiChoiceFrage.class.getSimpleName())) {
 			for (String[] moeglicheAntwort : ((MultiChoiceFrage) frage).getAntworten()) {
+				KlausurParagraph kreuzAntwort = new KlausurParagraph();
 				if (Boolean.valueOf(moeglicheAntwort[1])) {
-					frageParagraph.add(new Paragraph("[X]  " + moeglicheAntwort[0]));
+					kreuzAntwort.addText("[X]  " + moeglicheAntwort[0]);
 				} else {
-					frageParagraph.add(new Paragraph("[  ]  " + moeglicheAntwort[0]));
+					kreuzAntwort.addText("[ ]  " + moeglicheAntwort[0]);
 				}
+				frageParagraph.addParagraph(kreuzAntwort);
 			}
 
 		}
-		frageParagraph.add(new Paragraph(" "));
+		KlausurParagraph leer = new KlausurParagraph();
+		leer.addText(" ");
+		frageParagraph.addParagraph(leer);
 	}
 }

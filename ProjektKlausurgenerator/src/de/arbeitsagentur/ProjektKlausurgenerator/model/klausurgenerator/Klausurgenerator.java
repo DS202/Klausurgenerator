@@ -4,12 +4,11 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 
 import com.itextpdf.text.BadElementException;
-import com.itextpdf.text.Image;
-import com.itextpdf.text.Paragraph;
-
 import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.Freitext;
+import de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.MultiChoiceFrage;
+import de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator.subModel.KlausurParagraph;
 
 /**
  * KLasse um die KLausuren zu generieren. Erbt von PDFCreator
@@ -24,18 +23,16 @@ public class Klausurgenerator extends PDFCreator {
 
 		return klausur.getKlausurName() + ".pdf";
 
-
 	}
 
 	@Override
-	protected void addAntwortElement(Paragraph frageParagraph, AbstractFrage frage)
+	protected void addAntwortElement(KlausurParagraph frageParagraph, AbstractFrage frage)
 			throws BadElementException, MalformedURLException, IOException {
 
 		if (frage.getFrageTyp().equals(Freitext.class.getSimpleName())) {
 			for (int i = 1; i <= 3; i++) {
-				Image linie = Image
-						.getInstance(this.getClass().getClassLoader().getResource("images/schreibLinie.png"));
-				frageParagraph.add(linie);
+				KlausurLogger.getInstance().addLog("Setzte Linien");
+				frageParagraph.addLine();
 
 			}
 
@@ -43,7 +40,10 @@ public class Klausurgenerator extends PDFCreator {
 
 		if (frage.getFrageTyp().equals(MultiChoiceFrage.class.getSimpleName())) {
 			for (String[] moeglicheAntwort : ((MultiChoiceFrage) frage).getAntworten()) {
-				frageParagraph.add(new Paragraph("[  ]  " + moeglicheAntwort[0]));
+				KlausurLogger.getInstance().addLog("Setze Antwort");
+				KlausurParagraph antowrtmoeglichkeit = new KlausurParagraph();
+				antowrtmoeglichkeit.addText("[  ]  " + moeglicheAntwort[0]);
+				frageParagraph.addParagraph(frageParagraph);
 			}
 		}
 
