@@ -6,7 +6,7 @@ import java.util.List;
 import de.arbeitsagentur.ProjektKlausurgenerator.enums.Schwierigkeitsgrad;
 
 /**
- * Klasse fÃ¼r Multiple-Choice Fragen.
+ * Klasse für Multiple-Choice Fragen.
 
  * @author DDJ
  *
@@ -16,7 +16,7 @@ public class MultiChoiceFrage extends AbstractFrage {
 	private String[][] antworten;
 
 	/**
-	 * Basiskonstruktor fÃ¼r Benutzereingaben
+	 * Basiskonstruktor für Benutzereingaben
 	 * 
 	 * @param frage
 	 * @param schwierigkeitsgrad
@@ -32,11 +32,29 @@ public class MultiChoiceFrage extends AbstractFrage {
 
 	}
 
+	/**TODO
+	*	Beschreibung befüllen
+	*/
+	
+	/**
+	 * Beschreibung
+	 * 
+	 * @param rawFrage
+	 */
 	MultiChoiceFrage(String[] rawFrage) {
 		super(rawFrage);
 		antwortMatrix(rawFrage);
 	}
 
+	/**TODO
+	*	Beschreibung befüllen
+	*/
+	
+	/**
+	 * Beschreibung
+	 * 
+	 * @param rawFrage
+	 */
 	private void antwortMatrix(String[] rawFrage) {
 		List<String[]> list = new ArrayList<String[]>();
 		for (int position = 5; position < rawFrage.length; position = position + 2) {
@@ -50,11 +68,28 @@ public class MultiChoiceFrage extends AbstractFrage {
 
 	}
 
+	/**TODO
+	*	Beschreibung befüllen
+	*/
+	
+	/**
+	 * Beschreibung
+	 * 
+	 * @param rawFrage
+	 */
 	public String[][] getAntworten() {
 		return antworten;
 	}
 
-
+	/**TODO
+	*	Beschreibung befüllen
+	*/
+	
+	/**
+	 * Beschreibung
+	 * 
+	 * @param rawFrage
+	 */
 	@Override
 	protected Object getAntwort() {
 		StringBuilder antworten = new StringBuilder();
@@ -69,6 +104,15 @@ public class MultiChoiceFrage extends AbstractFrage {
 		return antworten.toString();
 	}
 
+	/**TODO
+	*	Beschreibung befüllen
+	*/
+	
+	/**
+	 * Beschreibung
+	 * 
+	 * @param rawFrage
+	 */
 	@Override
 	public String getFrageTyp() {
 		return this.getClass().getSimpleName();
