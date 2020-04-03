@@ -35,10 +35,7 @@ public class fragenImporter extends Verwalter {
 					br = new BufferedReader(new FileReader(csvFile));
 					
 					while ((line = br.readLine()) != null) {
-						System.out.println(fragen.toString() + fragen.size());
 						AbstractFrage frage = AbstractFrage.getFrage(line);
-						//TODO
-						//Überspringt die darunter liegende Zeile
 						fragen.add(frage);
 					}
 			} else {

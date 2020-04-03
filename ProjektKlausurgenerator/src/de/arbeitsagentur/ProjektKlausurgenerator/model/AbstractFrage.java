@@ -2,9 +2,6 @@ package de.arbeitsagentur.ProjektKlausurgenerator.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.swing.JOptionPane;
-
 import de.arbeitsagentur.ProjektKlausurgenerator.enums.Schwierigkeitsgrad;
 
 /**
@@ -66,7 +63,7 @@ public abstract class AbstractFrage {
 		StringBuilder frageString = new StringBuilder(getFrageTyp());
 		setSeperator(frageString);
 
-		frageString.append("\"" + frageText + "\"");
+		frageString.append(frageText);
 		setSeperator(frageString);
 
 		frageString.append(schwierigkeitsgrad.toString());

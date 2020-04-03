@@ -1,6 +1,7 @@
 package de.arbeitsagentur.ProjektKlausurgenerator.controller;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -16,7 +17,7 @@ import de.arbeitsagentur.ProjektKlausurgenerator.model.csvVerwaltung.fragenExpor
 import de.arbeitsagentur.ProjektKlausurgenerator.model.csvVerwaltung.fragenImporter;
 
 public class Controller {
-	private List<AbstractFrage> endgueltigeKlausurListeAbstractFragen;
+	private List<AbstractFrage> endgueltigeKlausurListeAbstractFragen = new ArrayList<AbstractFrage>();
 	
 	/**
 	 * Erstellt eine Freitextfrage, welche in die Liste der bereits vorhanden hinzugefügt wird.
