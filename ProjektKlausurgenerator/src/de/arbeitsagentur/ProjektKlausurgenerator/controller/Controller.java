@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.swing.JOptionPane;
+
+import com.sun.org.apache.xpath.internal.operations.And;
+
 import de.arbeitsagentur.ProjektKlausurgenerator.enums.Schwierigkeitsgrad;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.Freitext;
@@ -56,8 +59,9 @@ public class Controller {
 		if (frage.isEmpty()
 				|| punkte <= 0
 					|| seminar.isEmpty()
-						|| !antworten.toString().contains("true")
-							|| antworten.length < 5 || antworten.length > 5) {
+						|| enthaeltNurFalscheAntwort(antworten)
+							|| antworten[0].length < 4 || antworten[0].length > 4
+							) {
 			JOptionPane.showMessageDialog(null, "Die Parameter für eine neue Multiplechoicefrage sind unvollständig!", "Erstellvorgang abgebrochen", JOptionPane.ERROR_MESSAGE);
 		} else {
 			List<AbstractFrage> fragenListe = fragenImporter.importFragen(Verwalter.getCsvFile());
@@ -65,6 +69,15 @@ public class Controller {
 			fragenExporter.exportFragen(fragenListe);
 		}
 	}
+	
+	 private boolean enthaeltNurFalscheAntwort(String[][] antworten) {
+		for (int i = 0; i < antworten[0].length; i++) {
+			if (antworten[1][i].equals("true")) {
+				return false;
+			}
+		}
+		return true;
+	 }
 	
 	/**
 	 * Gibt alle bereits vorhandene Fragen wieder
