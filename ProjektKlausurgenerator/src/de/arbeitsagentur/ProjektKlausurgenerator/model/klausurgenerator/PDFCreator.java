@@ -92,7 +92,7 @@ public abstract class PDFCreator {
 	protected abstract void addAntwortElement(Paragraph frageParagraph, AbstractFrage frage)
 			throws BadElementException, MalformedURLException, IOException;
 
-	private void addPunkte(Paragraph frageParagraph, int punkte) {
+	private void addPunkte(Paragraph frageParagraph, Double punkte) {
 		Paragraph punkteParagraph = new Paragraph("(   /" + punkte + ")");
 		punkteParagraph.setAlignment(Element.ALIGN_RIGHT);
 		frageParagraph.add(punkteParagraph);
@@ -147,7 +147,7 @@ public abstract class PDFCreator {
 
 		punkteTable.addCell("Erreichbar");
 		for (AbstractFrage frage : list) {
-			PdfPCell cell = new PdfPCell(new Phrase(Integer.toString(frage.getPunkte())));
+			PdfPCell cell = new PdfPCell(new Phrase(Double.toString(frage.getPunkte())));
 			cell.setHorizontalAlignment(Element.ALIGN_CENTER);
 			cell.setVerticalAlignment(Element.ALIGN_CENTER);
 			punkteTable.addCell(cell);

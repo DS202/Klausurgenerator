@@ -3,6 +3,7 @@ package de.arbeitsagentur.ProjektKlausurgenerator.Oberflaeche;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
+
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;

@@ -14,9 +14,10 @@ import de.arbeitsagentur.ProjektKlausurgenerator.enums.Schwierigkeitsgrad;
 public class MultiChoiceFrage extends AbstractFrage {
 
 	private String[][] antworten;
+	private String[] antworten2;
 
 	/**
-	 * Basiskonstruktor für Benutzereingaben
+	 * Basiskonstruktor fuer Benutzereingaben
 	 * 
 	 * @param frage
 	 * @param schwierigkeitsgrad
@@ -25,10 +26,17 @@ public class MultiChoiceFrage extends AbstractFrage {
 	 * @param rAntwort
 	 * @param antworten
 	 */
-	public MultiChoiceFrage(String frage, Schwierigkeitsgrad schwierigkeitsgrad, int punkte, String seminar,
+	public MultiChoiceFrage(String frage, Schwierigkeitsgrad schwierigkeitsgrad, Double punkte, String seminar,
 			String[][] antworten) {
 		super(frage, schwierigkeitsgrad, punkte, seminar);
 		this.antworten = antworten;
+
+	}
+	
+	public MultiChoiceFrage(String frage, Schwierigkeitsgrad schwierigkeitsgrad, Double punkte, String seminar,
+			String[] antworten) {
+		super(frage, schwierigkeitsgrad, punkte, seminar);
+		this.antworten2 = antworten;
 
 	}
 
@@ -38,7 +46,7 @@ public class MultiChoiceFrage extends AbstractFrage {
 	}
 
 	private void antwortMatrix(String[] rawFrage) {
-		List<String[]> list = new ArrayList<String[]>();
+		List<String[]> list = new ArrayList<>();
 		for (int position = 5; position < rawFrage.length; position = position + 2) {
 			String[] answer = { rawFrage[position], rawFrage[position + 1] };
 			list.add(answer);

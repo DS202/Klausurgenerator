@@ -4,6 +4,9 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
 
 import javax.swing.JButton;
@@ -14,22 +17,43 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
+import com.itextpdf.text.DocumentException;
+
+import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
+import de.arbeitsagentur.ProjektKlausurgenerator.model.Klausur;
+import de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator.Klausurgenerator;
+import de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator.Loesungsgenerator;
+
 public class FragenTabelleFenster {
 
 	private JFrame frame;
 	private JPanel panel;
 	private JTable table;
 	private JScrollPane scrollPane;
-	private final static DefaultTableModel unchangedModell = new DefaultTableModel(new Object[][] {
-			{ null, null, null, null, null }, { null, null, null, null, null }, { null, null, null, null, null },
-			{ null, null, null, null, null }, { null, null, null, null, null }, { null, null, null, null, null },
-			{ null, null, null, null, null }, { null, null, null, null, null }, { null, null, null, null, null },
-			{ null, null, null, null, null }, { null, null, null, null, null }, { null, null, null, null, null }, },
-			new String[] { "Frage", "Kategorie", "Schwierigkeit", "Lösung", "ZYX" });
+	private final static DefaultTableModel unchangedModell = new DefaultTableModel(
+			new Object[][] { { null, null, null, null }, { null, null, null, null }, { null, null, null, null },
+					{ null, null, null, null }, { null, null, null, null }, { null, null, null, null },
+					{ null, null, null, null }, { null, null, null, null }, { null, null, null, null },
+					{ null, null, null, null }, { null, null, null, null }, { null, null, null, null }, },
+			new String[] { "Frage", "Typ", "Punkte", "Schwierigkeitsgrad" });
 
 	private DefaultTableModel modell = rewriteModell(unchangedModell);
+	private List<AbstractFrage> alleFragenliste;
+	private List<AbstractFrage> klausurFragenListe = new ArrayList<>();
+	private Boolean zuruecksetzen = false;
+	private JLabel lblKlausurPunkte;
 
 	public FragenTabelleFenster() {
+		initialize();
+		initTable(modell);
+
+		frame.setVisible(true);
+	}
+
+	public FragenTabelleFenster(List<AbstractFrage> fragenliste) {
+
+		this.alleFragenliste = fragenliste;
+
 		initialize();
 		initTable(modell);
 
@@ -69,29 +93,55 @@ public class FragenTabelleFenster {
 		JButton btnSpeichern = new JButton("Speichern");
 		btnSpeichern.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				System.out.println("Speichern");
+
+				Klausur berechneteKlausur = new Klausur(getKlausurpunkte(), "Test-Klausur", klausurFragenListe);
+
+				try {
+					new Klausurgenerator().createKlausur(berechneteKlausur);
+
+//					new Loesungsgenerator().createKlausur(berechneteKlausur);
+				} catch (Exception exception) {
+					System.out.println("Fehler beim Erzeugen der Klausur.");
+					exception.printStackTrace();
+				} 
 			}
 		});
 		btnSpeichern.setBounds(779, 602, 110, 23);
 		panel.add(btnSpeichern);
 
-		JButton btnZurcksetzten = new JButton("Zur\u00FCcksetzten");
+		JButton btnZurcksetzten = new JButton("Zur\u00FCcksetzen");
 		btnZurcksetzten.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
 				System.out.println("Zurücksetzen");
 				panel.remove(scrollPane);
 
-//				Vector<String> vector = new Vector<String>();
-//				vector.addAll(Arrays.asList(new String[] { "Frage", "Kategorie", "Schwierigkeit", "Lösung", "ZYX" }));
-//				modell = new DefaultTableModel(unchangedModell.getDataVector(), vector); // Zuruecksetzen des Modells
 				modell = rewriteModell(unchangedModell);
-
-				ausgabe(unchangedModell);
+				zuruecksetzen = true;
+				// ausgabe(unchangedModell);
 
 				initTable(modell);
 			}
 		});
 		btnZurcksetzten.setBounds(10, 602, 120, 23);
 		panel.add(btnZurcksetzten);
+
+		JButton btnPlus = new JButton("+");
+		FragenTabelleFenster fenster = this;
+		btnPlus.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Plus");
+				new FrageAuswaehlenFenster(fenster, alleFragenliste);
+			}
+		});
+		btnPlus.setBounds(800, 11, 89, 23);
+		panel.add(btnPlus);
+
+		lblKlausurPunkte = new JLabel("Anzahl Klausur-Punkte: " + getKlausurpunkte());
+		lblKlausurPunkte.setFont(new Font("Arial", Font.PLAIN, 12));
+		lblKlausurPunkte.setBounds(159, 602, 155, 23);
+		panel.add(lblKlausurPunkte);
 	}
 
 	private void initTable(DefaultTableModel modell) {
@@ -101,25 +151,67 @@ public class FragenTabelleFenster {
 		scrollPane.setBackground(Color.white);
 		panel.add(scrollPane);
 
-		table = new JTable();
+		if (Boolean.TRUE.equals(zuruecksetzen)) {
+			table = new JTable();
+			table.setModel(modell);
+			zuruecksetzen = false;
+		} else if (klausurFragenListe != null) {
+			table = tableFuellen();
+		} else {
+			table = new JTable();
+			table.setModel(modell);
+		}
+
 		table.setBackground(Color.white);
 		scrollPane.setViewportView(table);
-		table.setModel(modell);
+	}
+
+	private JTable tableFuellen() {
+
+		String[] columnNamesBewertung = { "Frage", "Typ", "Punkte", "Schwierigkeitsgrad" };
+		Object[][] dataBewertung = new Object[klausurFragenListe.size()][4];
+
+		for (int i = 0; i < klausurFragenListe.size(); i++) {
+			if (klausurFragenListe.get(i) != null) {
+				dataBewertung[i][0] = klausurFragenListe.get(i).getFrageText();
+				dataBewertung[i][1] = klausurFragenListe.get(i).getFrageTyp();
+				dataBewertung[i][2] = klausurFragenListe.get(i).getPunkte();
+				dataBewertung[i][3] = klausurFragenListe.get(i).getGrad();
+			}
+
+		}
+
+		return new JTable(dataBewertung, columnNamesBewertung);
+	}
+
+	public void addElementToKlausur(AbstractFrage frage) {
+		klausurFragenListe.add(frage);
+
+		initTable(modell);
+
+		lblKlausurPunkte.setText("Anzahl Klausur-Punkte: " + getKlausurpunkte());
+	}
+
+	private Double getKlausurpunkte() {
+
+		Double result = 0.00;
+
+		for (int i = 0; i < klausurFragenListe.size(); i++) {
+			result += klausurFragenListe.get(i).getPunkte();
+		}
+
+		return result;
 	}
 
 	private DefaultTableModel rewriteModell(DefaultTableModel data) {
 		DefaultTableModel modell = null;
 
-//		Vector<String> vector = new Vector<String>();
-//		vector.addAll(Arrays.asList(new String[] { "Frage", "Kategorie", "Schwierigkeit", "Lösung", "ZYX" }));
-//		modell = new DefaultTableModel(data.getDataVector(), vector); // Zuruecksetzen des Modells
-
-		modell = new DefaultTableModel(new Object[][] { { null, null, null, null, null },
-				{ null, null, null, null, null }, { null, null, null, null, null }, { null, null, null, null, null },
-				{ null, null, null, null, null }, { null, null, null, null, null }, { null, null, null, null, null },
-				{ null, null, null, null, null }, { null, null, null, null, null }, { null, null, null, null, null },
-				{ null, null, null, null, null }, { null, null, null, null, null }, },
-				new String[] { "Frage", "Kategorie", "Schwierigkeit", "Lösung", "ZYX" });
+		modell = new DefaultTableModel(
+				new Object[][] { { null, null, null, null }, { null, null, null, null }, { null, null, null, null },
+						{ null, null, null, null }, { null, null, null, null }, { null, null, null, null },
+						{ null, null, null, null }, { null, null, null, null }, { null, null, null, null },
+						{ null, null, null, null }, { null, null, null, null }, { null, null, null, null }, },
+				new String[] { "Frage", "Typ", "Punkte", "Schwierigkeitsgrad" });
 
 		return modell;
 	}
@@ -133,7 +225,6 @@ public class FragenTabelleFenster {
 				System.out.println(vector.get(i).get(j));
 			}
 		}
-
 	}
 
 }

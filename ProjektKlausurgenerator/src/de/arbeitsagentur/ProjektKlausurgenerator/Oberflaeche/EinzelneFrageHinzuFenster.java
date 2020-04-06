@@ -26,6 +26,7 @@ public class EinzelneFrageHinzuFenster {
 	private JFrame frame;
 	private JPanel panel;
 	private JPanel updatePanel = new JPanel();
+	private GuiUtils guiUtils = new GuiUtils();
 	private JTextField textFieldFrage;
 	private JTextField txtSeminar;
 	private String letzterFragenTyp = "Multichoice";
@@ -152,8 +153,19 @@ public class EinzelneFrageHinzuFenster {
 			public void actionPerformed(ActionEvent arg0) {
 
 				if (!txtSeminar.getText().isEmpty() && !textFieldFrage.getText().isEmpty()) {
-					System.out.println("Frage Speichern");
-					// TODO: Einzelne Frage Speichern in CSV --> Logik!!
+
+					if (comboBoxTyp.getSelectedItem().toString().equalsIgnoreCase("Freitext")) {
+						guiUtils.schreibeFrageInCSV("\n"+comboBoxTyp.getSelectedItem() + ";" + textFieldFrage.getText() + ";"
+								+ comboBoxSchwierigkeit.getSelectedItem() + ";" + spinnerPunkte.getValue() + ";"
+								+ txtSeminar.getText());
+					} else {
+						guiUtils.schreibeFrageInCSV("\n"+comboBoxTyp.getSelectedItem() + ";" + textFieldFrage.getText() + ";"
+								+ comboBoxSchwierigkeit.getSelectedItem() + ";" + spinnerPunkte.getValue() + ";"
+								+ txtSeminar.getText() + ";" + textField_1Antwort.getText() + ";"
+								+ textField_2Antwort.getText() + ";" + textField_3Antwort.getText() + ";"
+								+ textField_4Antwort.getText());
+					}
+
 					JOptionPane.showMessageDialog(null, "Prüfungsfrage erfolgreich gespeichert.", "Speichern",
 							JOptionPane.INFORMATION_MESSAGE);
 				} else {

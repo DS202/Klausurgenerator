@@ -1,13 +1,5 @@
 package de.arbeitsagentur.ProjektKlausurgenerator.model.csvVerwaltung;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.List;
-
-import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
-import de.arbeitsagentur.ProjektKlausurgenerator.model.Freitext;
-import de.arbeitsagentur.ProjektKlausurgenerator.model.MultiChoiceFrage;
-
 public class CsvCreator {
 //	private FileWriter newCsvDatei;
 //	private static final char DEFAULT__SEPARATOR = ';';
