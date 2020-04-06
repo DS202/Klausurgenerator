@@ -7,8 +7,8 @@ import de.arbeitsagentur.ProjektKlausurgenerator.enums.Schwierigkeitsgrad;
  *
  */
 public class Freitext extends AbstractFrage {
-	
 	private String[] schluesselwoerter;
+	
 /**
  * Basiskonstruktor für Benutzereingaben
  * @param frage

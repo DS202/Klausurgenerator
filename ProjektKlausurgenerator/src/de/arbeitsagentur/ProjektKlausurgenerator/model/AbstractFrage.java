@@ -2,7 +2,6 @@ package de.arbeitsagentur.ProjektKlausurgenerator.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import de.arbeitsagentur.ProjektKlausurgenerator.enums.Schwierigkeitsgrad;
 
 /**
@@ -64,7 +63,7 @@ public abstract class AbstractFrage {
 		StringBuilder frageString = new StringBuilder(getFrageTyp());
 		setSeperator(frageString);
 
-		frageString.append("\"" + frageText + "\"");
+		frageString.append(frageText);
 		setSeperator(frageString);
 
 		frageString.append(schwierigkeitsgrad.toString());
@@ -106,10 +105,9 @@ public abstract class AbstractFrage {
 		if (frageTyp.equals(Freitext.class.getSimpleName())) {
 			return new Freitext(rawFrage);
 		}
-		if (frageTyp.equals(MultiChoiceFrage.class.getSimpleName())) {
+//		if (frageTyp.equals(MultiChoiceFrage.class.getSimpleName())) {
 			return new MultiChoiceFrage(rawFrage);
-		}
-		return null;
+//		}
 	}
 
 	protected String entfernerApostroph(String strStream) {
@@ -118,13 +116,17 @@ public abstract class AbstractFrage {
 	}
 	
 	protected String[] antwortSplitter(String[] rawFrage, int startPunkt) {
-		List<String> antwortListe = new ArrayList<String>();
-		for (int position = startPunkt; position < rawFrage.length; position++) {
-			antwortListe.add(rawFrage[position]);
-		}
+        List<String> antwortListe = new ArrayList<String>();
+        for (int position = startPunkt; position < rawFrage.length; position++) {
+            antwortListe.add(rawFrage[position]);
+        }
+        String[] returnAnswer = new String[antwortListe.size()];
 
-		return (String[]) antwortListe.toArray();
-	}
+        for(int i = 0; i<antwortListe.size();i++) {
+            returnAnswer[i] = antwortListe.get(i);
+        }
+        return returnAnswer;
+    }
 
 	protected abstract Object getAntwort();
 
