@@ -43,7 +43,6 @@ public class fragenExporter extends Verwalter {
 		try {
 			writer.flush();
 			writer.close();
-			System.out.println("exportet at ");
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(null, "Fehler beim speichern der Datei " + csvFile + " ist aufgetreten!", "Schreibvorgang abgebrochen", JOptionPane.ERROR_MESSAGE);
 			e.printStackTrace();

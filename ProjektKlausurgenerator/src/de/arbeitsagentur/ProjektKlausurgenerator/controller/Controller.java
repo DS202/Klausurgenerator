@@ -60,7 +60,7 @@ public class Controller {
 				|| punkte <= 0
 					|| seminar.isEmpty()
 						|| enthaeltNurFalscheAntwort(antworten)
-							|| antworten[0].length < 4 || antworten[0].length > 4
+							|| antworten.length < 4 || antworten.length > 4
 							) {
 			JOptionPane.showMessageDialog(null, "Die Parameter für eine neue Multiplechoicefrage sind unvollständig!", "Erstellvorgang abgebrochen", JOptionPane.ERROR_MESSAGE);
 		} else {
@@ -71,8 +71,8 @@ public class Controller {
 	}
 	
 	 private boolean enthaeltNurFalscheAntwort(String[][] antworten) {
-		for (int i = 0; i < antworten[0].length; i++) {
-			if (antworten[1][i].equals("true")) {
+		for (int i = 0; i < antworten.length; i++) {
+			if (antworten[i][1].equals("true")) {
 				return false;
 			}
 		}
@@ -129,10 +129,11 @@ public class Controller {
 				if (aktuelleGesamtpunkte == anzahlPunkte) {
 					listPostion = i;
 					i = fragenList.size();
-				}if (aktuelleGesamtpunkte > anzahlPunkte) {
-					i = 0;
-					Collections.shuffle(fragenList);
 				}
+			}else if (aktuelleGesamtpunkte > anzahlPunkte) {
+				i = 0;
+				aktuelleGesamtpunkte = 0;
+				Collections.shuffle(fragenList);
 			}
 		}
 		
