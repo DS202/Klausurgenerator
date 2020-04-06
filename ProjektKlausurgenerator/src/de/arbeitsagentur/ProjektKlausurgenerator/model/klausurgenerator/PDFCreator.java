@@ -1,6 +1,5 @@
 package de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -8,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.itextpdf.text.BadElementException;
-import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
@@ -20,43 +18,51 @@ import com.itextpdf.text.pdf.PdfWriter;
 
 import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.Klausur;
+import de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger;
+import de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator.subModel.KlausurDocument;
+import de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator.subModel.KlausurParagraph;
 
 /**
  * Abstracte Klasse um die Klausuren bzw. Lösungen zu erstellen
+ * 
  * @author DDJ
  *
  */
 public abstract class PDFCreator {
 
-	protected Document klausurDokument = new Document();
+	protected KlausurDocument klausurDokument = new KlausurDocument();
 	protected Klausur klausur;
 	protected List<AbstractFrage> fragenListe;
 	protected PdfWriter writer;
 	protected FootEvent footEvent = new FootEvent();
 
 	protected int frageZahl = 1;
-
+/**
+ * Erstellt mit Hilfe eines Klausurobjektes ein PDF
+ * @param klausur
+ * @return
+ */
 	public boolean createKlausur(Klausur klausur) {
 		try {
 			setClassVariables(klausur);
-			writer = PdfWriter.getInstance(klausurDokument, new FileOutputStream(getPDFName()));
+			writer = PdfWriter.getInstance(klausurDokument.getDocument(), new FileOutputStream(getPDFName()));
 			writer.setPageEvent(footEvent);
-			klausurDokument.open();
+			KlausurLogger.getInstance().addLog("Öffne Dokument");
+			klausurDokument.getDocument().open();
 			addMetaDaten();
+			KlausurLogger.getInstance().addLog("Setze Titelblatt");
 			addTitleBlatt();
-			klausurDokument.newPage();
+			klausurDokument.getDocument().newPage();
+			KlausurLogger.getInstance().addLog("Setze Inhalte");
 			addInhalt();
-			klausurDokument.close();
-		} catch (FileNotFoundException e) {
+			KlausurLogger.getInstance().addLog("Schließe Dokument");
+			klausurDokument.getDocument().close();
+			KlausurLogger.getInstance().addLog("PDF erstellt");
+		} catch (Exception e) {
+			KlausurLogger.getInstance().addSaveError(e);
 			e.printStackTrace();
 			return false;
-		} catch (DocumentException e) {
-			e.printStackTrace();
-			return false;
-		} catch (IOException e) {
-			e.printStackTrace();
-			return false;
-		}
+		} 
 		return true;
 	}
 
@@ -70,14 +76,20 @@ public abstract class PDFCreator {
 	private void addInhalt() throws MalformedURLException, IOException, DocumentException {
 		int frageIndex = 1;
 		for (AbstractFrage frage : fragenListe) {
-			
-			Paragraph frageParagraph = new Paragraph();
-			frageParagraph.add(new Paragraph(frageIndex + ") " + frage.getFrageText()));
+			KlausurLogger.getInstance().addLog("Setze Frage: "+frageIndex);
+			KlausurParagraph frageParagraph = new KlausurParagraph();
+			KlausurLogger.getInstance().addLog("Setze Fragetext");
+			KlausurParagraph frageText = new KlausurParagraph();
+			frageText.addText(frageIndex + ") " + frage.getFrageText());
+			frageParagraph.addParagraph(frageText);
+			KlausurLogger.getInstance().addLog("Setze Punkte");
 			addPunkte(frageParagraph, frage.getPunkte());
+			KlausurLogger.getInstance().addLog("Setze AntwortElemente");
 			addAntwortElement(frageParagraph, frage);
-			klausurDokument.add(frageParagraph);
+			KlausurLogger.getInstance().addLog("Setze Paragraph in Dokument");
+			klausurDokument.addParagraphs(frageParagraph);
 
-			pruefeFragenZahlAufSeite(frageIndex);
+			//pruefeFragenZahlAufSeite(frageIndex);
 
 			frageIndex++;
 		}
@@ -85,17 +97,18 @@ public abstract class PDFCreator {
 
 	private void pruefeFragenZahlAufSeite(int frageIndex) {
 		if (frageIndex % 3 == 0) {
-			klausurDokument.newPage();
+			klausurDokument.getDocument().newPage();
 		}
 	}
 
-	protected abstract void addAntwortElement(Paragraph frageParagraph, AbstractFrage frage)
+	protected abstract void addAntwortElement(KlausurParagraph frageParagraph, AbstractFrage frage)
 			throws BadElementException, MalformedURLException, IOException;
 
-	private void addPunkte(Paragraph frageParagraph, int punkte) {
-		Paragraph punkteParagraph = new Paragraph("(   /" + punkte + ")");
-		punkteParagraph.setAlignment(Element.ALIGN_RIGHT);
-		frageParagraph.add(punkteParagraph);
+	private void addPunkte(KlausurParagraph frageParagraph, int punkte) {
+		KlausurParagraph punkteParagraph = new KlausurParagraph();
+		punkteParagraph.addText("(   /" + punkte + ")");
+		punkteParagraph.getParagraph().setAlignment(Element.ALIGN_RIGHT);
+		frageParagraph.addParagraph(punkteParagraph);
 
 	}
 
@@ -125,7 +138,7 @@ public abstract class PDFCreator {
 		notenBildung.addCell("Note:");
 		notenBildung.addCell(" ");
 
-		klausurDokument.add(notenBildung);
+		klausurDokument.getDocument().add(notenBildung);
 
 	}
 
@@ -158,7 +171,7 @@ public abstract class PDFCreator {
 			punkteTable.addCell(" ");
 		}
 
-		klausurDokument.add(punkteTable);
+		klausurDokument.getDocument().add(punkteTable);
 	}
 
 	private List<List<AbstractFrage>> getSubLists() {
@@ -188,7 +201,7 @@ public abstract class PDFCreator {
 				"\nName: ______________                                     Gruppe: ______\nDatum: _____________",
 				font);
 
-		klausurDokument.add(eintrag);
+		klausurDokument.getDocument().add(eintrag);
 	}
 
 	private int getDurchgeange() {
@@ -202,7 +215,7 @@ public abstract class PDFCreator {
 
 	private void setLeerZeilen(int zeilen) throws DocumentException {
 		for (int i = 0; i <= zeilen; i++) {
-			klausurDokument.add(new Paragraph(" "));
+			klausurDokument.getDocument().add(new Paragraph(" "));
 		}
 	}
 
@@ -211,13 +224,13 @@ public abstract class PDFCreator {
 
 		Paragraph title = new Paragraph("Klausur für Seminar:\n" + klausur.getKlausurName(), titelFont);
 		title.setAlignment(Element.ALIGN_CENTER);
-		klausurDokument.add(title);
+		klausurDokument.getDocument().add(title);
 
 	}
 
 	private void addMetaDaten() {
-		klausurDokument.addTitle("Klausur zum Seminar: " + klausur.getKlausurName());
-		klausurDokument.addAuthor(System.getProperty("user.name"));
+		klausurDokument.getDocument().addTitle("Klausur zum Seminar: " + klausur.getKlausurName());
+		klausurDokument.getDocument().addAuthor(System.getProperty("user.name"));
 
 	}
 
