@@ -63,8 +63,8 @@ public class TestPDF {
 
 			list.add(new Freitext("NewTest", Schwierigkeitsgrad.leicht, i, "TestSeminar", mA));
 		}
-		//String[][]mA2 = {{ "Pokemon", "true"},{ "Pikachu", "false"},{ "Maunzi","false"} };
-		//list.add(new MultiChoiceFrage("Franchisename", Schwierigkeitsgrad.mittel, 5,"Seminar", mA2));
+		String[][]mA2 = {{ "Pokemon", "true"},{ "Pikachu", "false"},{ "Maunzi","false"} };
+		list.add(new MultiChoiceFrage("Franchisename", Schwierigkeitsgrad.mittel, 5,"Seminar", mA2));
 
 		Klausur klausur = new Klausur(100, "KlausurTest", list);
 

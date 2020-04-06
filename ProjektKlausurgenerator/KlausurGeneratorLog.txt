@@ -2,8 +2,8 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2020-04-02T14:38:30</date>
-  <millis>1585831110769</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753489</millis>
   <sequence>0</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -13,8 +13,8 @@
   <message>Öffne Dokument</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:30</date>
-  <millis>1585831110791</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753504</millis>
   <sequence>1</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -24,8 +24,8 @@
   <message>Setze Titelblatt</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:30</date>
-  <millis>1585831110982</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753683</millis>
   <sequence>2</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -35,8 +35,8 @@
   <message>Setze Inhalte</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:30</date>
-  <millis>1585831110983</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753684</millis>
   <sequence>3</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -46,8 +46,8 @@
   <message>Setze Frage: 1</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:30</date>
-  <millis>1585831110985</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753685</millis>
   <sequence>4</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -57,8 +57,8 @@
   <message>Setze Fragetext</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:30</date>
-  <millis>1585831110986</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753686</millis>
   <sequence>5</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -68,8 +68,8 @@
   <message>Setze Punkte</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:30</date>
-  <millis>1585831110986</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753687</millis>
   <sequence>6</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -79,8 +79,8 @@
   <message>Setze AntwortElemente</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:30</date>
-  <millis>1585831110987</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753687</millis>
   <sequence>7</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -90,8 +90,8 @@
   <message>Setzte Linien</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111005</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753704</millis>
   <sequence>8</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -101,8 +101,8 @@
   <message>Setzte Linien</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111011</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753710</millis>
   <sequence>9</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -112,8 +112,8 @@
   <message>Setzte Linien</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111018</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753715</millis>
   <sequence>10</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -123,8 +123,8 @@
   <message>Setze Paragraph in Dokument</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111019</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753716</millis>
   <sequence>11</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -134,8 +134,8 @@
   <message>Prüfe Seitengröße</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111020</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753716</millis>
   <sequence>12</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -145,8 +145,8 @@
   <message>Füge neuen Paragraphen ein</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111025</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753722</millis>
   <sequence>13</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -156,8 +156,8 @@
   <message>Setze Frage: 2</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111026</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753722</millis>
   <sequence>14</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -167,8 +167,8 @@
   <message>Setze Fragetext</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111027</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753722</millis>
   <sequence>15</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -178,8 +178,8 @@
   <message>Setze Punkte</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111027</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753723</millis>
   <sequence>16</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -189,8 +189,8 @@
   <message>Setze AntwortElemente</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111028</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753723</millis>
   <sequence>17</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -200,8 +200,8 @@
   <message>Setzte Linien</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111031</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753726</millis>
   <sequence>18</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -211,8 +211,8 @@
   <message>Setzte Linien</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111034</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753730</millis>
   <sequence>19</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -222,8 +222,8 @@
   <message>Setzte Linien</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111039</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753732</millis>
   <sequence>20</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -233,8 +233,8 @@
   <message>Setze Paragraph in Dokument</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111040</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753732</millis>
   <sequence>21</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -244,8 +244,8 @@
   <message>Prüfe Seitengröße</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111040</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753733</millis>
   <sequence>22</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -255,8 +255,8 @@
   <message>Füge neuen Paragraphen ein</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111045</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753737</millis>
   <sequence>23</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -266,8 +266,8 @@
   <message>Setze Frage: 3</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111046</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753739</millis>
   <sequence>24</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -277,8 +277,8 @@
   <message>Setze Fragetext</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111046</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753740</millis>
   <sequence>25</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -288,8 +288,8 @@
   <message>Setze Punkte</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111047</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753741</millis>
   <sequence>26</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -299,8 +299,8 @@
   <message>Setze AntwortElemente</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111047</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753741</millis>
   <sequence>27</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -310,8 +310,8 @@
   <message>Setzte Linien</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111050</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753744</millis>
   <sequence>28</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -321,8 +321,8 @@
   <message>Setzte Linien</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111053</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753748</millis>
   <sequence>29</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -332,8 +332,8 @@
   <message>Setzte Linien</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111057</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753751</millis>
   <sequence>30</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -343,8 +343,8 @@
   <message>Setze Paragraph in Dokument</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111057</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753751</millis>
   <sequence>31</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -354,8 +354,8 @@
   <message>Prüfe Seitengröße</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111058</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753752</millis>
   <sequence>32</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -365,8 +365,8 @@
   <message>Füge neuen Paragraphen ein</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111062</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753756</millis>
   <sequence>33</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -376,8 +376,8 @@
   <message>Setze Frage: 4</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111064</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753757</millis>
   <sequence>34</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -387,8 +387,8 @@
   <message>Setze Fragetext</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111064</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753757</millis>
   <sequence>35</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -398,8 +398,8 @@
   <message>Setze Punkte</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111065</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753758</millis>
   <sequence>36</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -409,8 +409,8 @@
   <message>Setze AntwortElemente</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111065</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753758</millis>
   <sequence>37</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -420,8 +420,8 @@
   <message>Setzte Linien</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111068</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753761</millis>
   <sequence>38</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -431,8 +431,8 @@
   <message>Setzte Linien</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111071</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753764</millis>
   <sequence>39</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -442,8 +442,8 @@
   <message>Setzte Linien</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111073</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753766</millis>
   <sequence>40</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -453,8 +453,8 @@
   <message>Setze Paragraph in Dokument</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111074</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753766</millis>
   <sequence>41</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -464,8 +464,8 @@
   <message>Prüfe Seitengröße</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111074</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753767</millis>
   <sequence>42</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -475,8 +475,8 @@
   <message>Füge neuen Paragraphen ein</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111078</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753770</millis>
   <sequence>43</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -486,8 +486,8 @@
   <message>Setze Frage: 5</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111078</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753770</millis>
   <sequence>44</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -497,8 +497,8 @@
   <message>Setze Fragetext</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111079</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753772</millis>
   <sequence>45</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -508,8 +508,8 @@
   <message>Setze Punkte</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111079</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753772</millis>
   <sequence>46</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -519,8 +519,8 @@
   <message>Setze AntwortElemente</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111080</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753772</millis>
   <sequence>47</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -530,8 +530,8 @@
   <message>Setzte Linien</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111083</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753774</millis>
   <sequence>48</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -541,8 +541,8 @@
   <message>Setzte Linien</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111087</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753777</millis>
   <sequence>49</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -552,8 +552,8 @@
   <message>Setzte Linien</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111089</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753779</millis>
   <sequence>50</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -563,8 +563,8 @@
   <message>Setze Paragraph in Dokument</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111089</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753780</millis>
   <sequence>51</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -574,8 +574,8 @@
   <message>Prüfe Seitengröße</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111090</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753780</millis>
   <sequence>52</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -585,8 +585,8 @@
   <message>Setze neue Seite</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111091</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753781</millis>
   <sequence>53</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
@@ -596,9 +596,119 @@
   <message>Füge neuen Paragraphen ein</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111094</millis>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753785</millis>
   <sequence>54</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Setze Frage: 6</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753785</millis>
+  <sequence>55</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Setze Fragetext</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753786</millis>
+  <sequence>56</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Setze Punkte</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753786</millis>
+  <sequence>57</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Setze AntwortElemente</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753787</millis>
+  <sequence>58</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Setze Antwort</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753787</millis>
+  <sequence>59</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Setze Antwort</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753787</millis>
+  <sequence>60</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Setze Antwort</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753788</millis>
+  <sequence>61</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Setze Paragraph in Dokument</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753788</millis>
+  <sequence>62</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Prüfe Seitengröße</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753789</millis>
+  <sequence>63</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Füge neuen Paragraphen ein</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753798</millis>
+  <sequence>64</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -607,9 +717,9 @@
   <message>Schließe Dokument</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111123</millis>
-  <sequence>55</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753828</millis>
+  <sequence>65</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -618,9 +728,9 @@
   <message>PDF erstellt</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111126</millis>
-  <sequence>56</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753830</millis>
+  <sequence>66</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -629,9 +739,9 @@
   <message>Öffne Dokument</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111126</millis>
-  <sequence>57</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753830</millis>
+  <sequence>67</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -640,9 +750,9 @@
   <message>Setze Titelblatt</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111143</millis>
-  <sequence>58</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753843</millis>
+  <sequence>68</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -651,9 +761,9 @@
   <message>Setze Inhalte</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111143</millis>
-  <sequence>59</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753844</millis>
+  <sequence>69</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -662,9 +772,9 @@
   <message>Setze Frage: 1</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111144</millis>
-  <sequence>60</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753845</millis>
+  <sequence>70</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -673,9 +783,9 @@
   <message>Setze Fragetext</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111146</millis>
-  <sequence>61</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753855</millis>
+  <sequence>71</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -684,9 +794,9 @@
   <message>Setze Punkte</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111150</millis>
-  <sequence>62</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753856</millis>
+  <sequence>72</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -695,9 +805,20 @@
   <message>Setze AntwortElemente</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111153</millis>
-  <sequence>63</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753861</millis>
+  <sequence>73</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Füge Schlüsselwörter hinzu</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753862</millis>
+  <sequence>74</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -706,9 +827,9 @@
   <message>Setze Paragraph in Dokument</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111156</millis>
-  <sequence>64</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753862</millis>
+  <sequence>75</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -717,9 +838,9 @@
   <message>Prüfe Seitengröße</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111157</millis>
-  <sequence>65</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753863</millis>
+  <sequence>76</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -728,9 +849,9 @@
   <message>Füge neuen Paragraphen ein</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111165</millis>
-  <sequence>66</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753864</millis>
+  <sequence>77</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -739,9 +860,9 @@
   <message>Setze Frage: 2</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111167</millis>
-  <sequence>67</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753864</millis>
+  <sequence>78</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -750,9 +871,9 @@
   <message>Setze Fragetext</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111168</millis>
-  <sequence>68</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753866</millis>
+  <sequence>79</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -761,9 +882,9 @@
   <message>Setze Punkte</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111168</millis>
-  <sequence>69</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753867</millis>
+  <sequence>80</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -772,9 +893,20 @@
   <message>Setze AntwortElemente</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111169</millis>
-  <sequence>70</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753867</millis>
+  <sequence>81</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Füge Schlüsselwörter hinzu</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753868</millis>
+  <sequence>82</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -783,9 +915,9 @@
   <message>Setze Paragraph in Dokument</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111169</millis>
-  <sequence>71</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753868</millis>
+  <sequence>83</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -794,9 +926,9 @@
   <message>Prüfe Seitengröße</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111169</millis>
-  <sequence>72</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753868</millis>
+  <sequence>84</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -805,9 +937,9 @@
   <message>Füge neuen Paragraphen ein</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111173</millis>
-  <sequence>73</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753872</millis>
+  <sequence>85</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -816,9 +948,9 @@
   <message>Setze Frage: 3</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111183</millis>
-  <sequence>74</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753873</millis>
+  <sequence>86</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -827,9 +959,9 @@
   <message>Setze Fragetext</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111183</millis>
-  <sequence>75</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753873</millis>
+  <sequence>87</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -838,9 +970,9 @@
   <message>Setze Punkte</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111184</millis>
-  <sequence>76</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753885</millis>
+  <sequence>88</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -849,9 +981,20 @@
   <message>Setze AntwortElemente</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111184</millis>
-  <sequence>77</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753886</millis>
+  <sequence>89</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Füge Schlüsselwörter hinzu</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753887</millis>
+  <sequence>90</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -860,9 +1003,9 @@
   <message>Setze Paragraph in Dokument</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111184</millis>
-  <sequence>78</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753887</millis>
+  <sequence>91</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -871,9 +1014,9 @@
   <message>Prüfe Seitengröße</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111185</millis>
-  <sequence>79</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753887</millis>
+  <sequence>92</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -882,9 +1025,9 @@
   <message>Füge neuen Paragraphen ein</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111186</millis>
-  <sequence>80</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753888</millis>
+  <sequence>93</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -893,9 +1036,9 @@
   <message>Setze Frage: 4</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111187</millis>
-  <sequence>81</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753892</millis>
+  <sequence>94</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -904,9 +1047,9 @@
   <message>Setze Fragetext</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111187</millis>
-  <sequence>82</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753893</millis>
+  <sequence>95</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -915,9 +1058,9 @@
   <message>Setze Punkte</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111187</millis>
-  <sequence>83</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753893</millis>
+  <sequence>96</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -926,9 +1069,20 @@
   <message>Setze AntwortElemente</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111189</millis>
-  <sequence>84</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753894</millis>
+  <sequence>97</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Füge Schlüsselwörter hinzu</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753894</millis>
+  <sequence>98</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -937,9 +1091,9 @@
   <message>Setze Paragraph in Dokument</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111190</millis>
-  <sequence>85</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753895</millis>
+  <sequence>99</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -948,9 +1102,9 @@
   <message>Prüfe Seitengröße</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111190</millis>
-  <sequence>86</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753895</millis>
+  <sequence>100</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -959,9 +1113,9 @@
   <message>Füge neuen Paragraphen ein</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111191</millis>
-  <sequence>87</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753896</millis>
+  <sequence>101</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -970,9 +1124,9 @@
   <message>Setze Frage: 5</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111191</millis>
-  <sequence>88</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753897</millis>
+  <sequence>102</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -981,9 +1135,9 @@
   <message>Setze Fragetext</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111192</millis>
-  <sequence>89</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753897</millis>
+  <sequence>103</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -992,9 +1146,9 @@
   <message>Setze Punkte</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111192</millis>
-  <sequence>90</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753897</millis>
+  <sequence>104</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -1003,9 +1157,20 @@
   <message>Setze AntwortElemente</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111192</millis>
-  <sequence>91</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753898</millis>
+  <sequence>105</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Füge Schlüsselwörter hinzu</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753899</millis>
+  <sequence>106</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -1014,9 +1179,9 @@
   <message>Setze Paragraph in Dokument</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111193</millis>
-  <sequence>92</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753900</millis>
+  <sequence>107</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -1025,9 +1190,9 @@
   <message>Prüfe Seitengröße</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111194</millis>
-  <sequence>93</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753900</millis>
+  <sequence>108</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -1036,9 +1201,119 @@
   <message>Füge neuen Paragraphen ein</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111194</millis>
-  <sequence>94</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753901</millis>
+  <sequence>109</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Setze Frage: 6</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753901</millis>
+  <sequence>110</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Setze Fragetext</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753902</millis>
+  <sequence>111</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Setze Punkte</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753902</millis>
+  <sequence>112</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Setze AntwortElemente</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753902</millis>
+  <sequence>113</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Setze Antwortmöglichkeit</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753903</millis>
+  <sequence>114</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Setze Antwortmöglichkeit</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753903</millis>
+  <sequence>115</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Setze Antwortmöglichkeit</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753903</millis>
+  <sequence>116</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Setze Paragraph in Dokument</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753904</millis>
+  <sequence>117</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Prüfe Seitengröße</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753904</millis>
+  <sequence>118</sequence>
+  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
+  <level>INFO</level>
+  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
+  <method>addLog</method>
+  <thread>1</thread>
+  <message>Füge neuen Paragraphen ein</message>
+</record>
+<record>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753905</millis>
+  <sequence>119</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
@@ -1047,9 +1322,9 @@
   <message>Schließe Dokument</message>
 </record>
 <record>
-  <date>2020-04-02T14:38:31</date>
-  <millis>1585831111197</millis>
-  <sequence>95</sequence>
+  <date>2020-04-06T11:35:53</date>
+  <millis>1586165753908</millis>
+  <sequence>120</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>

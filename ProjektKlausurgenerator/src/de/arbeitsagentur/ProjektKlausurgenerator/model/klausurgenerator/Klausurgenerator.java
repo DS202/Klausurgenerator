@@ -41,10 +41,10 @@ public class Klausurgenerator extends PDFCreator {
 		if (frage.getFrageTyp().equals(MultiChoiceFrage.class.getSimpleName())) {
 			for (String[] moeglicheAntwort : ((MultiChoiceFrage) frage).getAntworten()) {
 				KlausurLogger.getInstance().addLog("Setze Antwort");
-				KlausurParagraph antowrtmoeglichkeit = new KlausurParagraph();
-				antowrtmoeglichkeit.addText("[  ]  " + moeglicheAntwort[0]);
-				frageParagraph.addParagraph(frageParagraph);
+				KlausurParagraph antowrtmoeglichkeit = new KlausurParagraph("[  ]  " + moeglicheAntwort[0]);
+				frageParagraph.addParagraph(antowrtmoeglichkeit);
 			}
+			frageParagraph.addParagraph(new KlausurParagraph(" "));
 		}
 
 	}

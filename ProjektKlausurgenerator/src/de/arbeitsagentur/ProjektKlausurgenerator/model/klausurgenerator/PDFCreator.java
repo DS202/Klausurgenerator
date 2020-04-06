@@ -1,6 +1,5 @@
 package de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -38,7 +37,11 @@ public abstract class PDFCreator {
 	protected FootEvent footEvent = new FootEvent();
 
 	protected int frageZahl = 1;
-
+/**
+ * Erstellt mit Hilfe eines Klausurobjektes ein PDF
+ * @param klausur
+ * @return
+ */
 	public boolean createKlausur(Klausur klausur) {
 		try {
 			setClassVariables(klausur);

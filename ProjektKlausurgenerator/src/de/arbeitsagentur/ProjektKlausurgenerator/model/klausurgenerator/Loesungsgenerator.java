@@ -6,6 +6,7 @@ import java.net.MalformedURLException;
 import com.itextpdf.text.BadElementException;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.Freitext;
+import de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.MultiChoiceFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator.subModel.KlausurParagraph;
 
@@ -27,8 +28,9 @@ public class Loesungsgenerator extends PDFCreator {
 			throws BadElementException, MalformedURLException, IOException {
 		if (frage.getFrageTyp().equals(Freitext.class.getSimpleName())) {
 			KlausurParagraph loesung = new KlausurParagraph();
+			KlausurLogger.getInstance().addLog("Füge Schlüsselwörter hinzu");
 			for (String schluesselwort : ((Freitext) frage).getSchluesselwoerter()) {
-				loesung.addText(schluesselwort+", ");
+				loesung.addParagraph(new KlausurParagraph(schluesselwort+", "));
 			}
 			frageParagraph.addParagraph(loesung);
 
@@ -36,6 +38,7 @@ public class Loesungsgenerator extends PDFCreator {
 		if (frage.getFrageTyp().equals(MultiChoiceFrage.class.getSimpleName())) {
 			for (String[] moeglicheAntwort : ((MultiChoiceFrage) frage).getAntworten()) {
 				KlausurParagraph kreuzAntwort = new KlausurParagraph();
+				KlausurLogger.getInstance().addLog("Setze Antwortmöglichkeit");
 				if (Boolean.valueOf(moeglicheAntwort[1])) {
 					kreuzAntwort.addText("[X]  " + moeglicheAntwort[0]);
 				} else {
