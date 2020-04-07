@@ -59,10 +59,11 @@ public class MultiChoiceFrage extends AbstractFrage {
 		StringBuilder antworten = new StringBuilder();
 
 		for (String[] antwort : this.antworten) {
-			antworten.append("\"" + antwort[0] + "\"");
+			antworten.append(antwort[0]);
 
 			setSeperator(antworten);
 			antworten.append(antwort[1]);
+			setSeperator(antworten);
 		}
 
 		return antworten.toString();
