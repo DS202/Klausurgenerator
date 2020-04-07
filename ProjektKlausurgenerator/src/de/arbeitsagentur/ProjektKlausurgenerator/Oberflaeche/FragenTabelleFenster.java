@@ -4,10 +4,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -16,8 +14,6 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-
-import com.itextpdf.text.DocumentException;
 
 import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.Klausur;
@@ -30,7 +26,7 @@ public class FragenTabelleFenster {
 	private JPanel panel;
 	private JTable table;
 	private JScrollPane scrollPane;
-	private final static DefaultTableModel unchangedModell = new DefaultTableModel(
+	private static final DefaultTableModel unchangedModell = new DefaultTableModel(
 			new Object[][] { { null, null, null, null }, { null, null, null, null }, { null, null, null, null },
 					{ null, null, null, null }, { null, null, null, null }, { null, null, null, null },
 					{ null, null, null, null }, { null, null, null, null }, { null, null, null, null },
@@ -95,16 +91,8 @@ public class FragenTabelleFenster {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Speichern");
 
-				Klausur berechneteKlausur = new Klausur(getKlausurpunkte(), "Test-Klausur", klausurFragenListe);
+				klausurAlsPdfErstellen();
 
-				try {
-					new Klausurgenerator().createKlausur(berechneteKlausur);
-
-//					new Loesungsgenerator().createKlausur(berechneteKlausur);
-				} catch (Exception exception) {
-					System.out.println("Fehler beim Erzeugen der Klausur.");
-					exception.printStackTrace();
-				} 
 			}
 		});
 		btnSpeichern.setBounds(779, 602, 110, 23);
@@ -144,6 +132,11 @@ public class FragenTabelleFenster {
 		panel.add(lblKlausurPunkte);
 	}
 
+	/*
+	 * Zuruecksetzen + Hinzufuegen von Elementen zur Table.
+	 * 
+	 * @param modell derzeitiges Defaultlistmodell.
+	 */
 	private void initTable(DefaultTableModel modell) {
 		// Tabelle
 		scrollPane = new JScrollPane();
@@ -155,6 +148,8 @@ public class FragenTabelleFenster {
 			table = new JTable();
 			table.setModel(modell);
 			zuruecksetzen = false;
+			lblKlausurPunkte.setText("Anzahl Klausur-Punkte: 0");
+			klausurFragenListe = new ArrayList<>();
 		} else if (klausurFragenListe != null) {
 			table = tableFuellen();
 		} else {
@@ -166,6 +161,12 @@ public class FragenTabelleFenster {
 		scrollPane.setViewportView(table);
 	}
 
+	// *** Hilfsmethoden *** //
+
+	/** Fuellt eine JTable mit Daten aus klausurFragenListe und gibt sie zurueck.
+	 * 
+	 * @return Gefuellte JTable.
+	 */
 	private JTable tableFuellen() {
 
 		String[] columnNamesBewertung = { "Frage", "Typ", "Punkte", "Schwierigkeitsgrad" };
@@ -176,22 +177,17 @@ public class FragenTabelleFenster {
 				dataBewertung[i][0] = klausurFragenListe.get(i).getFrageText();
 				dataBewertung[i][1] = klausurFragenListe.get(i).getFrageTyp();
 				dataBewertung[i][2] = klausurFragenListe.get(i).getPunkte();
-				dataBewertung[i][3] = klausurFragenListe.get(i).getGrad();
+				dataBewertung[i][3] = klausurFragenListe.get(i).getSchwierigkeitsgrad();
 			}
-
 		}
 
 		return new JTable(dataBewertung, columnNamesBewertung);
 	}
 
-	public void addElementToKlausur(AbstractFrage frage) {
-		klausurFragenListe.add(frage);
-
-		initTable(modell);
-
-		lblKlausurPunkte.setText("Anzahl Klausur-Punkte: " + getKlausurpunkte());
-	}
-
+	/** Ermittelt die Gesamtpunktzahl an Punkten derzeit in klausurFragenListe.
+	 * 
+	 * @return Double Wert (Anzahl der Pruefungspunkte.)
+	 */
 	private Double getKlausurpunkte() {
 
 		Double result = 0.00;
@@ -203,6 +199,11 @@ public class FragenTabelleFenster {
 		return result;
 	}
 
+	/** Methode zum "Leeren" des DeafultTableModels.
+	 * 
+	 * @param data DefaulttableModell voll
+	 * @return DefaulttableModell leer
+	 */
 	private DefaultTableModel rewriteModell(DefaultTableModel data) {
 		DefaultTableModel modell = null;
 
@@ -216,15 +217,48 @@ public class FragenTabelleFenster {
 		return modell;
 	}
 
-	private void ausgabe(DefaultTableModel data) {
+//	private void ausgabe(DefaultTableModel data) {
+//
+//		Vector<Vector<String>> vector = data.getDataVector();
+//
+//		for (int i = 0; i < vector.size(); i++) {
+//			for (int j = 0; j < vector.get(i).size(); j++) {
+//				System.out.println(vector.get(i).get(j));
+//			}
+//		}
+//	}
 
-		Vector<Vector<String>> vector = data.getDataVector();
+	/**
+	 * Erstellt eine Klausur als PDF (Zwei unterschiedliche Exceptions - 1.
+	 * Erstellen der Klausur - 2. Erstellen des Lösungsbogens)
+	 */
+	private void klausurAlsPdfErstellen() {
+		Klausur berechneteKlausur = new Klausur(getKlausurpunkte(), "Test-Klausur", klausurFragenListe);
 
-		for (int i = 0; i < vector.size(); i++) {
-			for (int j = 0; j < vector.get(i).size(); j++) {
-				System.out.println(vector.get(i).get(j));
-			}
+		try {
+			new Klausurgenerator().createKlausur(berechneteKlausur);
+
+		} catch (Exception exception) {
+			System.out.println("Fehler beim Erzeugen der Klausur.");
+			exception.printStackTrace();
 		}
+
+		try {
+			new Loesungsgenerator().createKlausur(berechneteKlausur);
+		} catch (Exception e) {
+			System.out.println("Fehler beim Erzeugen der Lösung.");
+			e.printStackTrace();
+		}
+	}
+
+	// *** Eine Art Setter zum setzen von Fragen in die Klausur *** //
+
+	public void addElementToKlausur(AbstractFrage frage) {
+		klausurFragenListe.add(frage);
+
+		initTable(modell);
+
+		lblKlausurPunkte.setText("Anzahl Klausur-Punkte: " + getKlausurpunkte());
 	}
 
 }

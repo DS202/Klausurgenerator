@@ -7,14 +7,13 @@ import de.arbeitsagentur.ProjektKlausurgenerator.enums.Schwierigkeitsgrad;
 
 /**
  * Klasse für Multiple-Choice Fragen.
-
+ * 
  * @author DDJ
  *
  */
 public class MultiChoiceFrage extends AbstractFrage {
 
 	private String[][] antworten;
-	private String[] antworten2;
 
 	/**
 	 * Basiskonstruktor fuer Benutzereingaben
@@ -30,13 +29,6 @@ public class MultiChoiceFrage extends AbstractFrage {
 			String[][] antworten) {
 		super(frage, schwierigkeitsgrad, punkte, seminar);
 		this.antworten = antworten;
-
-	}
-	
-	public MultiChoiceFrage(String frage, Schwierigkeitsgrad schwierigkeitsgrad, Double punkte, String seminar,
-			String[] antworten) {
-		super(frage, schwierigkeitsgrad, punkte, seminar);
-		this.antworten2 = antworten;
 
 	}
 
@@ -62,12 +54,11 @@ public class MultiChoiceFrage extends AbstractFrage {
 		return antworten;
 	}
 
-
 	@Override
 	protected Object getAntwort() {
 		StringBuilder antworten = new StringBuilder();
-		
-		for(String[] antwort : this.antworten) {
+
+		for (String[] antwort : this.antworten) {
 			antworten.append("\"" + antwort[0] + "\"");
 
 			setSeperator(antworten);

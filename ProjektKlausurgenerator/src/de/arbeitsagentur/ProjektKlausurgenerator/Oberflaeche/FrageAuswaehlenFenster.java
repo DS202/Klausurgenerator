@@ -89,10 +89,15 @@ public class FrageAuswaehlenFenster {
 		panel.add(btnFrageHinzu);
 	}
 	
+	/** Fuellt ein DefaultListModel mit den Werten aus der fragenliste.
+	 * 
+	 * @param model DefaultListModel
+	 * @return DefaultListModel mit Werten (Fragen) aus der fragenliste.
+	 */
 	private DefaultListModel<String> fuelleListeMitFragen(DefaultListModel<String> model){
 		
 		for (int i = 0; i < fragenList.size(); i++) {
-			model.addElement(fragenList.get(i).getFrageText() + " >>> " + fragenList.get(i).getFrageTyp());
+			model.addElement(fragenList.get(i).getFrageText() + " >>> " + fragenList.get(i).getFrageTyp() + " >>> " + fragenList.get(i).getSchwierigkeitsgrad());
 		}
 		
 		return model;

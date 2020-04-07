@@ -44,10 +44,6 @@ public abstract class AbstractFrage {
 		return frageText;
 	}
 
-	public Schwierigkeitsgrad getGrad() {
-		return schwierigkeitsgrad;
-	}
-
 	public Double getPunkte() {
 		return punkte;
 	}

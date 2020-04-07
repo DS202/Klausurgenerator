@@ -97,9 +97,10 @@ public class Hauptfenster {
 		menuBar.add(mnMenue);
 
 		JMenuItem mntmFragehinzufgen = new JMenuItem("FrageHinzuf\u00FCgen");
+		Hauptfenster tmpFenster = this;
 		mntmFragehinzufgen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new EinzelneFrageHinzuFenster();
+				new EinzelneFrageHinzuFenster(tmpFenster);
 			}
 		});
 		mnMenue.add(mntmFragehinzufgen);
@@ -108,9 +109,10 @@ public class Hauptfenster {
 		mntmFrageHinzuefgen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Hilfe anzeigen");
-//				JOptionPane.showMessageDialog(null, "Prüfungstool der Gruppe F18", "Hilfe",
-//						JOptionPane.INFORMATION_MESSAGE);
 				new HilfeFenster();
+				guiUtils.winNotification("Authoren",
+						"Anna Sperling, Daniel Schmidt, Nico Loss, Sven Günther, Karl Ullrich, Patrick Özer-Peuerle, Philipp Maier, Yannick Marchl, David Jager",
+						"Info");
 			}
 		});
 
@@ -250,6 +252,13 @@ public class Hauptfenster {
 			new FragenTabelleFenster(fragenliste);
 		}
 
+	}
+	
+	/**
+	 * Neu Einlesen der CSV-Datei, nachdem eine Frage hinzugefuegt wurde.
+	 */
+	protected void update() {
+		this.fragenliste = guiUtils.csvEinlesen();
 	}
 
 }

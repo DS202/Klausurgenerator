@@ -1,6 +1,9 @@
-Freitext;Frage1;schwer;20;Java Aufbau
-Multichoice;Frage2;leicht;20;Grundlagen;Antwort1;Antwort2;Antwort3;Antwort4
-Multichoice;Frage3;mittel;10;Java Aufbau;Antwort1;Antwort2;Antwort3;Antwort4
-Multichoice;aewrwea;leicht;0.5;awer;wer;qwer;qwer;qwer
-Freitext;aewrwea;leicht;0.5;awer
-Multichoice;dgf;schwer;2.5;dfg;fdg;fg;dfg;fdg
+Freitext;Frage1;schwer;20;Java Aufbau;Hund Katze Maus
+Multichoice;Frage2;leicht;20;Grundlagen;Antwort1;True;Antwort2;False;Antwort3;False;Antwort4;False
+Multichoice;Frage3;mittel;10;Java Aufbau;Antwort1;False;Antwort2;False;Antwort3;True;Antwort4;False
+Multichoice;aewrwea;leicht;0.5;awer;wer;False;qwer;False;qwer;False;qwer;True
+Freitext;aewrwea;leicht;0.5;awer;Stadt Dorf Strasse
+Multichoice;dgf;schwer;2.5;dfg;fdg;False;fg;True;dfg;False;fdg;False
+Multichoice;Ist die Banane krumm;schwer;0.5;Bananenseminar;ja;True;nein;False;deine mum;False;dein dad;False
+Multichoice;Ist die Sonne Gelb;mittel;0.5;Sonnenseminar;ja;False;nein;True;droelf;False;miau;False
+Multichoice;frage droelf;mittel;0.5;miau;miau1;False;miau2;True;miau3;False;miau4;False
