@@ -3,7 +3,6 @@ package de.arbeitsagentur.ProjektKlausurgenerator.Oberflaeche;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
-
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -15,9 +14,10 @@ public class HilfeFenster {
 	private JFrame frame;
 	private JPanel panel;
 	private final String hilfetext = "\nPrüfungstool der Gruppe F18."
-			+ "\n\nKlausur Importieren:\nHier kann eine existierende Klausur als CSV oder als PDF eingelesen werden."
+			+ "\n\nKlausur Importieren:\nHier kann eine existierende Klausur als CSV eingelesen werden."
 			+ "\n\nKlausur Exportieren:\nHier kann eine erstellte Klausur als CSV oder als PDF exportiert werden."
-			+ "\n\nKlausur Erstellen:\nEs öffnet sich ein neues Fenster mit einer Tabellenansicht in der man Fragen & antworten erstellen kann und abschließend abgespeichert werden kann.";
+			+ "\n\nKlausur Erstellen:\nEs öffnet sich ein neues Fenster mit einer Tabellenansicht, in der man eine Klausur aus bereits existierende Fragen zusammenstellen kann."
+			+ "\n\nFrage Hinzufügen:\nIn diesem Fenster erstellt man neu Fragen.";
 
 	public HilfeFenster() {
 		initialize();

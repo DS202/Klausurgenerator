@@ -67,7 +67,7 @@ public class EinzelneFrageHinzuFenster {
 		});
 
 		frame.setLocationRelativeTo(null);
-		frame.setTitle("Fragentabelle");
+		frame.setTitle("Frage hinzufügen");
 		frame.setResizable(false);
 		frame.getContentPane().setLayout(null);
 
