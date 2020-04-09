@@ -6,8 +6,8 @@ import java.util.List;
 import de.arbeitsagentur.ProjektKlausurgenerator.enums.Schwierigkeitsgrad;
 
 /**
- * Klasse für Multiple-Choice Fragen.
-
+ * Klasse fÃ¼r Multiple-Choice Fragen.
+ * 
  * @author DDJ
  *
  */
@@ -16,7 +16,7 @@ public class MultiChoiceFrage extends AbstractFrage {
 	private String[][] antworten;
 
 	/**
-	 * Basiskonstruktor für Benutzereingaben
+	 * Basiskonstruktor fuer Benutzereingaben
 	 * 
 	 * @param frage
 	 * @param schwierigkeitsgrad
@@ -25,38 +25,20 @@ public class MultiChoiceFrage extends AbstractFrage {
 	 * @param rAntwort
 	 * @param antworten
 	 */
-	public MultiChoiceFrage(String frage, Schwierigkeitsgrad schwierigkeitsgrad, int punkte, String seminar,
+	public MultiChoiceFrage(String frage, Schwierigkeitsgrad schwierigkeitsgrad, Double punkte, String seminar,
 			String[][] antworten) {
 		super(frage, schwierigkeitsgrad, punkte, seminar);
 		this.antworten = antworten;
 
 	}
 
-	/**TODO
-	*	Beschreibung befüllen
-	*/
-	
-	/**
-	 * Beschreibung
-	 * 
-	 * @param rawFrage
-	 */
 	MultiChoiceFrage(String[] rawFrage) {
 		super(rawFrage);
 		antwortMatrix(rawFrage);
 	}
 
-	/**TODO
-	*	Beschreibung befüllen
-	*/
-	
-	/**
-	 * Beschreibung
-	 * 
-	 * @param rawFrage
-	 */
 	private void antwortMatrix(String[] rawFrage) {
-		List<String[]> list = new ArrayList<String[]>();
+		List<String[]> list = new ArrayList<>();
 		for (int position = 5; position < rawFrage.length; position = position + 2) {
 			String[] answer = { rawFrage[position], rawFrage[position + 1] };
 			list.add(answer);
@@ -68,33 +50,15 @@ public class MultiChoiceFrage extends AbstractFrage {
 
 	}
 
-	/**TODO
-	*	Beschreibung befüllen
-	*/
-	
-	/**
-	 * Beschreibung
-	 * 
-	 * @param rawFrage
-	 */
 	public String[][] getAntworten() {
 		return antworten;
 	}
 
-	/**TODO
-	*	Beschreibung befüllen
-	*/
-	
-	/**
-	 * Beschreibung
-	 * 
-	 * @param rawFrage
-	 */
 	@Override
 	protected Object getAntwort() {
 		StringBuilder antworten = new StringBuilder();
-		
-		for(String[] antwort : this.antworten) {
+
+		for (String[] antwort : this.antworten) {
 			antworten.append(antwort[0]);
 
 			setSeperator(antworten);
@@ -105,15 +69,6 @@ public class MultiChoiceFrage extends AbstractFrage {
 		return antworten.toString();
 	}
 
-	/**TODO
-	*	Beschreibung befüllen
-	*/
-	
-	/**
-	 * Beschreibung
-	 * 
-	 * @param rawFrage
-	 */
 	@Override
 	public String getFrageTyp() {
 		return this.getClass().getSimpleName();

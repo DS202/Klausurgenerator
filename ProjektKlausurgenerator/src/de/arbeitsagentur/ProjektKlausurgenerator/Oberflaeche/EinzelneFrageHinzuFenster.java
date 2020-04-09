@@ -7,9 +7,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
+import javax.swing.ButtonGroup;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -26,6 +28,7 @@ public class EinzelneFrageHinzuFenster {
 	private JFrame frame;
 	private JPanel panel;
 	private JPanel updatePanel = new JPanel();
+	private GuiUtils guiUtils = new GuiUtils();
 	private JTextField textFieldFrage;
 	private JTextField txtSeminar;
 	private String letzterFragenTyp = "Multichoice";
@@ -35,7 +38,16 @@ public class EinzelneFrageHinzuFenster {
 	private JTextField textField_3Antwort;
 	private JTextField textField_4Antwort;
 
-	public EinzelneFrageHinzuFenster() {
+	private JCheckBox chckbR1;
+	private JCheckBox chckbR2;
+	private JCheckBox chckbR3;
+	private JCheckBox chckbR4;
+
+	private Hauptfenster fenster;
+
+	public EinzelneFrageHinzuFenster(Hauptfenster fenster) {
+		this.fenster = fenster;
+
 		initialize();
 
 		frame.setVisible(true);
@@ -46,8 +58,16 @@ public class EinzelneFrageHinzuFenster {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 440, 590);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frame.addWindowListener(new java.awt.event.WindowAdapter() {
+			@Override
+			public void windowClosed(java.awt.event.WindowEvent windowEvent) {
+				fenster.update();
+				frame.dispose();
+			}
+		});
+
 		frame.setLocationRelativeTo(null);
-		frame.setTitle("Fragentabelle");
+		frame.setTitle("Frage hinzufügen");
 		frame.setResizable(false);
 		frame.getContentPane().setLayout(null);
 
@@ -152,8 +172,21 @@ public class EinzelneFrageHinzuFenster {
 			public void actionPerformed(ActionEvent arg0) {
 
 				if (!txtSeminar.getText().isEmpty() && !textFieldFrage.getText().isEmpty()) {
-					System.out.println("Frage Speichern");
-					// TODO: Einzelne Frage Speichern in CSV --> Logik!!
+
+					if (comboBoxTyp.getSelectedItem().toString().equalsIgnoreCase("Freitext")) {
+						guiUtils.schreibeFrageInCSV("\n" + comboBoxTyp.getSelectedItem() + ";"
+								+ textFieldFrage.getText() + ";" + comboBoxSchwierigkeit.getSelectedItem() + ";"
+								+ spinnerPunkte.getValue() + ";" + txtSeminar.getText());
+					} else {
+						guiUtils.schreibeFrageInCSV("\n" + comboBoxTyp.getSelectedItem() + ";"
+								+ textFieldFrage.getText() + ";" + comboBoxSchwierigkeit.getSelectedItem() + ";"
+								+ spinnerPunkte.getValue() + ";" + txtSeminar.getText() + ";"
+								+ textField_1Antwort.getText() + ";" + checkboxenAuswerten(chckbR1) + ";"
+								+ textField_2Antwort.getText() + ";" + checkboxenAuswerten(chckbR2) + ";"
+								+ textField_3Antwort.getText() + ";" + checkboxenAuswerten(chckbR3) + ";"
+								+ textField_4Antwort.getText() + ";" + checkboxenAuswerten(chckbR4));
+					}
+
 					JOptionPane.showMessageDialog(null, "Prüfungsfrage erfolgreich gespeichert.", "Speichern",
 							JOptionPane.INFORMATION_MESSAGE);
 				} else {
@@ -182,13 +215,22 @@ public class EinzelneFrageHinzuFenster {
 
 		textField_1Antwort = new JTextField();
 		textField_1Antwort.setToolTipText("Antwort");
-		textField_1Antwort.setBounds(10, 40, 200, 20);
+		textField_1Antwort.setBounds(10, 40, 384, 20);
 		updatePanel.add(textField_1Antwort);
 
-		JLabel lblRichtigeAntwort = new JLabel("Richtige Antwort:");
+		JLabel lblRichtigeAntwort = new JLabel("Richtige Antwort (Schlagwörter):");
 		lblRichtigeAntwort.setFont(new Font("Arial", Font.PLAIN, 12));
-		lblRichtigeAntwort.setBounds(10, 15, 124, 14);
+		lblRichtigeAntwort.setBounds(10, 15, 184, 14);
 		updatePanel.add(lblRichtigeAntwort);
+
+		// Hilfe-Icon
+		ImageIcon imageIcon = GuiUtils.getScaledImageIcon("images/info.PNG", 25, 25);
+
+		JLabel lblInfoBild = new JLabel("Bild");
+		lblInfoBild.setIcon(imageIcon);
+		lblInfoBild.setToolTipText("Hier bitte Schlagwörter eingeben, die zur vollen Punktzahl nötig sind.");
+		lblInfoBild.setBounds(198, 10, 25, 25);
+		updatePanel.add(lblInfoBild);
 	}
 
 	private void updateMultichoice() {
@@ -225,5 +267,40 @@ public class EinzelneFrageHinzuFenster {
 		lblMglicheAntworten.setFont(new Font("Arial", Font.PLAIN, 12));
 		lblMglicheAntworten.setBounds(23, 11, 137, 14);
 		updatePanel.add(lblMglicheAntworten);
+
+		chckbR1 = new JCheckBox();
+		chckbR1.setBackground(Color.WHITE);
+		chckbR1.setBounds(260, 35, 97, 23);
+		updatePanel.add(chckbR1);
+
+		chckbR2 = new JCheckBox();
+		chckbR2.setBackground(Color.WHITE);
+		chckbR2.setBounds(260, 66, 97, 23);
+		updatePanel.add(chckbR2);
+
+		chckbR3 = new JCheckBox();
+		chckbR3.setBackground(Color.WHITE);
+		chckbR3.setBounds(260, 97, 97, 23);
+		updatePanel.add(chckbR3);
+
+		chckbR4 = new JCheckBox();
+		chckbR4.setBackground(Color.WHITE);
+		chckbR4.setBounds(260, 128, 97, 23);
+		updatePanel.add(chckbR4);
+
+		ButtonGroup bg = new ButtonGroup();
+		bg.add(chckbR1);
+		bg.add(chckbR2);
+		bg.add(chckbR3);
+		bg.add(chckbR4);
+	}
+
+	private String checkboxenAuswerten(JCheckBox box) {
+
+		if (box.isSelected()) {
+			return "True";
+		} else {
+			return "False";
+		}
 	}
 }

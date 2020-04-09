@@ -13,7 +13,7 @@ import de.arbeitsagentur.ProjektKlausurgenerator.enums.Schwierigkeitsgrad;
 public abstract class AbstractFrage {
 	protected String frageText;
 	protected Schwierigkeitsgrad schwierigkeitsgrad;
-	protected int punkte;
+	protected Double punkte;
 	protected String seminar;
 
 	/**
@@ -24,7 +24,7 @@ public abstract class AbstractFrage {
 	 * @param punkte
 	 * @param seminar
 	 */
-	AbstractFrage(String frage, Schwierigkeitsgrad schwierigkeitsgrad, int punkte, String seminar) {
+	AbstractFrage(String frage, Schwierigkeitsgrad schwierigkeitsgrad, Double punkte, String seminar) {
 		frageText = frage;
 		this.schwierigkeitsgrad = schwierigkeitsgrad;
 		this.punkte = punkte;
@@ -35,7 +35,7 @@ public abstract class AbstractFrage {
 	AbstractFrage(String[] rawFrage) {
 		frageText = rawFrage[1];
 		schwierigkeitsgrad = Schwierigkeitsgrad.valueOf(rawFrage[2]);
-		punkte = Integer.valueOf(rawFrage[3]);
+		punkte = Double.valueOf(rawFrage[3]);
 		seminar = rawFrage[4];
 	}
 
@@ -43,11 +43,7 @@ public abstract class AbstractFrage {
 		return frageText;
 	}
 
-	public Schwierigkeitsgrad getGrad() {
-		return schwierigkeitsgrad;
-	}
-
-	public int getPunkte() {
+	public Double getPunkte() {
 		return punkte;
 	}
 

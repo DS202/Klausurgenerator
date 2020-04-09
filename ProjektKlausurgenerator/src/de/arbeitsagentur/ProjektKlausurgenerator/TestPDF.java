@@ -57,14 +57,14 @@ public class TestPDF {
 	}
 
 	public void testKlausur() {
-		List<AbstractFrage> list = new ArrayList<AbstractFrage>();
+		List<AbstractFrage> list = new ArrayList<>();
 		String[] mA = { "Pokemon", "Pikachu", "Maunzi" };
 		for (int i = 5; i > 0; i--) {
 
-			list.add(new Freitext("NewTest", Schwierigkeitsgrad.leicht, i, "TestSeminar", mA));
+			list.add(new Freitext("NewTest", Schwierigkeitsgrad.leicht, Double.parseDouble(i+""), "TestSeminar", mA));
 		}
 		String[][]mA2 = {{ "Pokemon", "true"},{ "Pikachu", "false"},{ "Maunzi","false"} };
-		list.add(new MultiChoiceFrage("Franchisename", Schwierigkeitsgrad.mittel, 5,"Seminar", mA2));
+		list.add(new MultiChoiceFrage("Franchisename", Schwierigkeitsgrad.mittel, 5.5,"Seminar", mA2));
 
 		Klausur klausur = new Klausur(100, "KlausurTest", list);
 

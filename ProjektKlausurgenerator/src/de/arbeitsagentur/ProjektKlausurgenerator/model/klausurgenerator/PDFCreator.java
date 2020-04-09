@@ -1,5 +1,6 @@
 package de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator;
 
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -7,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.itextpdf.text.BadElementException;
+import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
@@ -104,11 +106,11 @@ public abstract class PDFCreator {
 	protected abstract void addAntwortElement(KlausurParagraph frageParagraph, AbstractFrage frage)
 			throws BadElementException, MalformedURLException, IOException;
 
-	private void addPunkte(KlausurParagraph frageParagraph, int punkte) {
-		KlausurParagraph punkteParagraph = new KlausurParagraph();
-		punkteParagraph.addText("(   /" + punkte + ")");
-		punkteParagraph.getParagraph().setAlignment(Element.ALIGN_RIGHT);
-		frageParagraph.addParagraph(punkteParagraph);
+	private void addPunkte(KlausurParagraph frageParagraph, Double punkte) {
+		Paragraph punkteParagraph = new Paragraph("(   /" + punkte + ")");
+		punkteParagraph.setAlignment(Element.ALIGN_RIGHT);
+		frageParagraph.getParagraph().add(punkteParagraph);
+
 
 	}
 
@@ -160,7 +162,7 @@ public abstract class PDFCreator {
 
 		punkteTable.addCell("Erreichbar");
 		for (AbstractFrage frage : list) {
-			PdfPCell cell = new PdfPCell(new Phrase(Integer.toString(frage.getPunkte())));
+			PdfPCell cell = new PdfPCell(new Phrase(Double.toString(frage.getPunkte())));
 			cell.setHorizontalAlignment(Element.ALIGN_CENTER);
 			cell.setVerticalAlignment(Element.ALIGN_CENTER);
 			punkteTable.addCell(cell);

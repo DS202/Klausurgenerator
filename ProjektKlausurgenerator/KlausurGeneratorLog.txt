@@ -2,1334 +2,597 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753489</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712463</millis>
   <sequence>0</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
+  <thread>16</thread>
   <message>Öffne Dokument</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753504</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712480</millis>
   <sequence>1</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
+  <thread>16</thread>
   <message>Setze Titelblatt</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753683</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712635</millis>
   <sequence>2</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
+  <thread>16</thread>
   <message>Setze Inhalte</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753684</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712635</millis>
   <sequence>3</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
+  <thread>16</thread>
   <message>Setze Frage: 1</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753685</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712636</millis>
   <sequence>4</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
+  <thread>16</thread>
   <message>Setze Fragetext</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753686</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712637</millis>
   <sequence>5</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
+  <thread>16</thread>
   <message>Setze Punkte</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753687</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712637</millis>
   <sequence>6</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
+  <thread>16</thread>
   <message>Setze AntwortElemente</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753687</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712638</millis>
   <sequence>7</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setzte Linien</message>
+  <thread>16</thread>
+  <message>Setze Antwort</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753704</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712638</millis>
   <sequence>8</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setzte Linien</message>
+  <thread>16</thread>
+  <message>Setze Antwort</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753710</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712639</millis>
   <sequence>9</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setzte Linien</message>
+  <thread>16</thread>
+  <message>Setze Antwort</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753715</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712639</millis>
   <sequence>10</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Paragraph in Dokument</message>
+  <thread>16</thread>
+  <message>Setze Antwort</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753716</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712639</millis>
   <sequence>11</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Prüfe Seitengröße</message>
+  <thread>16</thread>
+  <message>Setze Paragraph in Dokument</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753716</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712640</millis>
   <sequence>12</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Füge neuen Paragraphen ein</message>
+  <thread>16</thread>
+  <message>Prüfe Seitengröße</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753722</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712640</millis>
   <sequence>13</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Frage: 2</message>
+  <thread>16</thread>
+  <message>Füge neuen Paragraphen ein</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753722</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712641</millis>
   <sequence>14</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Fragetext</message>
+  <thread>16</thread>
+  <message>Setze Frage: 2</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753722</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712642</millis>
   <sequence>15</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Punkte</message>
+  <thread>16</thread>
+  <message>Setze Fragetext</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753723</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712643</millis>
   <sequence>16</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze AntwortElemente</message>
+  <thread>16</thread>
+  <message>Setze Punkte</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753723</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712643</millis>
   <sequence>17</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setzte Linien</message>
+  <thread>16</thread>
+  <message>Setze AntwortElemente</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753726</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712644</millis>
   <sequence>18</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setzte Linien</message>
+  <thread>16</thread>
+  <message>Setze Antwort</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753730</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712644</millis>
   <sequence>19</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setzte Linien</message>
+  <thread>16</thread>
+  <message>Setze Antwort</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753732</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712644</millis>
   <sequence>20</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Paragraph in Dokument</message>
+  <thread>16</thread>
+  <message>Setze Antwort</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753732</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712645</millis>
   <sequence>21</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Prüfe Seitengröße</message>
+  <thread>16</thread>
+  <message>Setze Antwort</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753733</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712645</millis>
   <sequence>22</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Füge neuen Paragraphen ein</message>
+  <thread>16</thread>
+  <message>Setze Paragraph in Dokument</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753737</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712645</millis>
   <sequence>23</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Frage: 3</message>
+  <thread>16</thread>
+  <message>Prüfe Seitengröße</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753739</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712645</millis>
   <sequence>24</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Fragetext</message>
+  <thread>16</thread>
+  <message>Füge neuen Paragraphen ein</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753740</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712646</millis>
   <sequence>25</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Punkte</message>
+  <thread>16</thread>
+  <message>Schließe Dokument</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753741</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712657</millis>
   <sequence>26</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze AntwortElemente</message>
+  <thread>16</thread>
+  <message>PDF erstellt</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753741</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712658</millis>
   <sequence>27</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setzte Linien</message>
+  <thread>16</thread>
+  <message>Öffne Dokument</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753744</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712659</millis>
   <sequence>28</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setzte Linien</message>
+  <thread>16</thread>
+  <message>Setze Titelblatt</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753748</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712668</millis>
   <sequence>29</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setzte Linien</message>
+  <thread>16</thread>
+  <message>Setze Inhalte</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753751</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712668</millis>
   <sequence>30</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Paragraph in Dokument</message>
+  <thread>16</thread>
+  <message>Setze Frage: 1</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753751</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712669</millis>
   <sequence>31</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Prüfe Seitengröße</message>
+  <thread>16</thread>
+  <message>Setze Fragetext</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753752</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712669</millis>
   <sequence>32</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Füge neuen Paragraphen ein</message>
+  <thread>16</thread>
+  <message>Setze Punkte</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753756</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712670</millis>
   <sequence>33</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Frage: 4</message>
+  <thread>16</thread>
+  <message>Setze AntwortElemente</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753757</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712670</millis>
   <sequence>34</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Fragetext</message>
+  <thread>16</thread>
+  <message>Setze Antwortmöglichkeit</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753757</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712671</millis>
   <sequence>35</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Punkte</message>
+  <thread>16</thread>
+  <message>Setze Antwortmöglichkeit</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753758</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712671</millis>
   <sequence>36</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze AntwortElemente</message>
+  <thread>16</thread>
+  <message>Setze Antwortmöglichkeit</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753758</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712671</millis>
   <sequence>37</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setzte Linien</message>
+  <thread>16</thread>
+  <message>Setze Antwortmöglichkeit</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753761</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712672</millis>
   <sequence>38</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setzte Linien</message>
+  <thread>16</thread>
+  <message>Setze Paragraph in Dokument</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753764</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712673</millis>
   <sequence>39</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setzte Linien</message>
+  <thread>16</thread>
+  <message>Prüfe Seitengröße</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753766</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712674</millis>
   <sequence>40</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Paragraph in Dokument</message>
+  <thread>16</thread>
+  <message>Füge neuen Paragraphen ein</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753766</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712676</millis>
   <sequence>41</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Prüfe Seitengröße</message>
+  <thread>16</thread>
+  <message>Setze Frage: 2</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753767</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712676</millis>
   <sequence>42</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Füge neuen Paragraphen ein</message>
+  <thread>16</thread>
+  <message>Setze Fragetext</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753770</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712677</millis>
   <sequence>43</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Frage: 5</message>
+  <thread>16</thread>
+  <message>Setze Punkte</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753770</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712677</millis>
   <sequence>44</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Fragetext</message>
+  <thread>16</thread>
+  <message>Setze AntwortElemente</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753772</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712677</millis>
   <sequence>45</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Punkte</message>
+  <thread>16</thread>
+  <message>Setze Antwortmöglichkeit</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753772</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712678</millis>
   <sequence>46</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze AntwortElemente</message>
+  <thread>16</thread>
+  <message>Setze Antwortmöglichkeit</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753772</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712678</millis>
   <sequence>47</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setzte Linien</message>
+  <thread>16</thread>
+  <message>Setze Antwortmöglichkeit</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753774</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712679</millis>
   <sequence>48</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setzte Linien</message>
+  <thread>16</thread>
+  <message>Setze Antwortmöglichkeit</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753777</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712679</millis>
   <sequence>49</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setzte Linien</message>
+  <thread>16</thread>
+  <message>Setze Paragraph in Dokument</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753779</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712679</millis>
   <sequence>50</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Paragraph in Dokument</message>
+  <thread>16</thread>
+  <message>Prüfe Seitengröße</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753780</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712680</millis>
   <sequence>51</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Prüfe Seitengröße</message>
+  <thread>16</thread>
+  <message>Füge neuen Paragraphen ein</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753780</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712681</millis>
   <sequence>52</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze neue Seite</message>
+  <thread>16</thread>
+  <message>Schließe Dokument</message>
 </record>
 <record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753781</millis>
+  <date>2020-04-07T13:58:32</date>
+  <millis>1586260712685</millis>
   <sequence>53</sequence>
   <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
   <level>INFO</level>
   <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
   <method>addLog</method>
-  <thread>1</thread>
-  <message>Füge neuen Paragraphen ein</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753785</millis>
-  <sequence>54</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Frage: 6</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753785</millis>
-  <sequence>55</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Fragetext</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753786</millis>
-  <sequence>56</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Punkte</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753786</millis>
-  <sequence>57</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze AntwortElemente</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753787</millis>
-  <sequence>58</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Antwort</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753787</millis>
-  <sequence>59</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Antwort</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753787</millis>
-  <sequence>60</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Antwort</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753788</millis>
-  <sequence>61</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Paragraph in Dokument</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753788</millis>
-  <sequence>62</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Prüfe Seitengröße</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753789</millis>
-  <sequence>63</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Füge neuen Paragraphen ein</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753798</millis>
-  <sequence>64</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Schließe Dokument</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753828</millis>
-  <sequence>65</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>PDF erstellt</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753830</millis>
-  <sequence>66</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Öffne Dokument</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753830</millis>
-  <sequence>67</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Titelblatt</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753843</millis>
-  <sequence>68</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Inhalte</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753844</millis>
-  <sequence>69</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Frage: 1</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753845</millis>
-  <sequence>70</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Fragetext</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753855</millis>
-  <sequence>71</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Punkte</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753856</millis>
-  <sequence>72</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze AntwortElemente</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753861</millis>
-  <sequence>73</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Füge Schlüsselwörter hinzu</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753862</millis>
-  <sequence>74</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Paragraph in Dokument</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753862</millis>
-  <sequence>75</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Prüfe Seitengröße</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753863</millis>
-  <sequence>76</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Füge neuen Paragraphen ein</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753864</millis>
-  <sequence>77</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Frage: 2</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753864</millis>
-  <sequence>78</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Fragetext</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753866</millis>
-  <sequence>79</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Punkte</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753867</millis>
-  <sequence>80</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze AntwortElemente</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753867</millis>
-  <sequence>81</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Füge Schlüsselwörter hinzu</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753868</millis>
-  <sequence>82</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Paragraph in Dokument</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753868</millis>
-  <sequence>83</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Prüfe Seitengröße</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753868</millis>
-  <sequence>84</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Füge neuen Paragraphen ein</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753872</millis>
-  <sequence>85</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Frage: 3</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753873</millis>
-  <sequence>86</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Fragetext</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753873</millis>
-  <sequence>87</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Punkte</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753885</millis>
-  <sequence>88</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze AntwortElemente</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753886</millis>
-  <sequence>89</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Füge Schlüsselwörter hinzu</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753887</millis>
-  <sequence>90</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Paragraph in Dokument</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753887</millis>
-  <sequence>91</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Prüfe Seitengröße</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753887</millis>
-  <sequence>92</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Füge neuen Paragraphen ein</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753888</millis>
-  <sequence>93</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Frage: 4</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753892</millis>
-  <sequence>94</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Fragetext</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753893</millis>
-  <sequence>95</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Punkte</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753893</millis>
-  <sequence>96</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze AntwortElemente</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753894</millis>
-  <sequence>97</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Füge Schlüsselwörter hinzu</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753894</millis>
-  <sequence>98</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Paragraph in Dokument</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753895</millis>
-  <sequence>99</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Prüfe Seitengröße</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753895</millis>
-  <sequence>100</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Füge neuen Paragraphen ein</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753896</millis>
-  <sequence>101</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Frage: 5</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753897</millis>
-  <sequence>102</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Fragetext</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753897</millis>
-  <sequence>103</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Punkte</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753897</millis>
-  <sequence>104</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze AntwortElemente</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753898</millis>
-  <sequence>105</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Füge Schlüsselwörter hinzu</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753899</millis>
-  <sequence>106</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Paragraph in Dokument</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753900</millis>
-  <sequence>107</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Prüfe Seitengröße</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753900</millis>
-  <sequence>108</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Füge neuen Paragraphen ein</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753901</millis>
-  <sequence>109</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Frage: 6</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753901</millis>
-  <sequence>110</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Fragetext</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753902</millis>
-  <sequence>111</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Punkte</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753902</millis>
-  <sequence>112</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze AntwortElemente</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753902</millis>
-  <sequence>113</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Antwortmöglichkeit</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753903</millis>
-  <sequence>114</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Antwortmöglichkeit</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753903</millis>
-  <sequence>115</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Antwortmöglichkeit</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753903</millis>
-  <sequence>116</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Setze Paragraph in Dokument</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753904</millis>
-  <sequence>117</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Prüfe Seitengröße</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753904</millis>
-  <sequence>118</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Füge neuen Paragraphen ein</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753905</millis>
-  <sequence>119</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
-  <message>Schließe Dokument</message>
-</record>
-<record>
-  <date>2020-04-06T11:35:53</date>
-  <millis>1586165753908</millis>
-  <sequence>120</sequence>
-  <logger>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</logger>
-  <level>INFO</level>
-  <class>de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger</class>
-  <method>addLog</method>
-  <thread>1</thread>
+  <thread>16</thread>
   <message>PDF erstellt</message>
 </record>
 </log>

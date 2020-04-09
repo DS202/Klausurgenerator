@@ -17,7 +17,7 @@ public class Freitext extends AbstractFrage {
  * @param seminar
  * @param schluesselwoerter
  */
-	public Freitext(String frage, Schwierigkeitsgrad schwierigkeitsgrad, int punkte, String seminar, String[] schluesselwoerter) {
+	public Freitext(String frage, Schwierigkeitsgrad schwierigkeitsgrad, Double punkte, String seminar, String[] schluesselwoerter) {
 		super(frage, schwierigkeitsgrad, punkte, seminar);
 		this.schluesselwoerter = schluesselwoerter;
 	}

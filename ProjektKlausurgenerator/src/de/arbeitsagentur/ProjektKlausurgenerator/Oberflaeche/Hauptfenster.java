@@ -4,6 +4,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.util.List;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -20,13 +21,19 @@ import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 import de.arbeitsagentur.ProjektKlausurgenerator.enums.Filetype;
+import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
 
 public class Hauptfenster {
 
 	private JFrame frame;
 	private JPanel panel;
+	private GuiUtils guiUtils = new GuiUtils();
+	private List<AbstractFrage> fragenliste;
 
 	public Hauptfenster() {
+
+		this.fragenliste = guiUtils.csvEinlesen();
+
 		initialize();
 		initMenue();
 		initButtons();
@@ -53,7 +60,7 @@ public class Hauptfenster {
 		lblPrfungsgenerierertool.setFont(new Font("Tahoma", Font.PLAIN, 25));
 		lblPrfungsgenerierertool.setBounds(293, 33, 278, 31);
 		panel.add(lblPrfungsgenerierertool);
-		
+
 		// Unter-Ueberschrift
 		JLabel lblKlausur = new JLabel("<html><u><b>Klausur:</u></b></html>");
 		lblKlausur.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -88,11 +95,12 @@ public class Hauptfenster {
 
 		JMenu mnMenue = new JMenu("Men\u00FC");
 		menuBar.add(mnMenue);
-		
+
 		JMenuItem mntmFragehinzufgen = new JMenuItem("FrageHinzuf\u00FCgen");
+		Hauptfenster tmpFenster = this;
 		mntmFragehinzufgen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new EinzelneFrageHinzuFenster();
+				new EinzelneFrageHinzuFenster(tmpFenster);
 			}
 		});
 		mnMenue.add(mntmFragehinzufgen);
@@ -101,9 +109,10 @@ public class Hauptfenster {
 		mntmFrageHinzuefgen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Hilfe anzeigen");
-//				JOptionPane.showMessageDialog(null, "Prüfungstool der Gruppe F18", "Hilfe",
-//						JOptionPane.INFORMATION_MESSAGE);
 				new HilfeFenster();
+				guiUtils.winNotification("Authoren",
+						"Anna Sperling, Daniel Schmidt, Nico Loss, Sven Günther, Karl Ullrich, Patrick Özer-Peuerle, Philipp Maier, Yannick Marchl, David Jager",
+						"Info");
 			}
 		});
 
@@ -235,9 +244,21 @@ public class Hauptfenster {
 	}
 
 	private void aktionErstellen() {
+		if (fragenliste == null) {
+			System.out.println("Erstellen");
+			new FragenTabelleFenster();
+		} else {
+			System.out.println("Erstellen");
+			new FragenTabelleFenster(fragenliste);
+		}
 
-		System.out.println("Erstellen");
-		new FragenTabelleFenster();
+	}
+	
+	/**
+	 * Neu Einlesen der CSV-Datei, nachdem eine Frage hinzugefuegt wurde.
+	 */
+	protected void update() {
+		this.fragenliste = guiUtils.csvEinlesen();
 	}
 
 }
