@@ -2,6 +2,9 @@ package de.arbeitsagentur.ProjektKlausurgenerator.model.csvVerwaltung;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.List;
 
 import javax.swing.JOptionPane;
@@ -11,10 +14,10 @@ import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
 /**
  * Exportieren der Fragen zum CSV-Datei
  * 
- * @author DDJ
+ * @author DDJ & Nico
  *
  */
-public class fragenExporter extends Verwalter {
+public class FragenExporter extends Verwalter {
 	
 	/**
 	 * Erstellt aus einer Liste von AbstraktenFragen eine csv-Datei
@@ -81,6 +84,32 @@ public class fragenExporter extends Verwalter {
 			e.printStackTrace();
 		}
 		
+	}
+	
+	/*
+	 *
+	 * Schreibt Fragen in die CSV-Datei mit allen Fragen (Haengt Fragen ans Ende der Datei hinzu).
+	 * 
+	 * @author Nico
+	 */
+
+	/**
+	 * Schreibt eine Frage in die CSV Datei (fragen.csv)
+	 * 
+	 * @param text Frage als Komma-Separated-Value (Trennzeichen == ;).
+	 * 
+	 * @author Nico
+	 */
+	public static void schreibeFrageInCSV(String text) {
+		text = text.replaceAll("Ö", "Oe").replaceAll("Ä", "Ae").replaceAll("Ü", "Ue").replaceAll("ß", "ss")
+				.replaceAll("ö", "oe").replaceAll("ä", "ae").replaceAll("ü", "ue");
+
+		try {
+			Files.write(Paths.get("resources/dateien/fragen.csv"), text.getBytes(), StandardOpenOption.APPEND);
+		} catch (IOException e) {
+			System.out.println("Fehler beim Schreiben der Datei.");
+			e.printStackTrace();
+		}
 	}
 
 }

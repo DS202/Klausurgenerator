@@ -34,7 +34,7 @@ public class TestPDF {
 		String[][] mA2 = { { "Pokemon", "true" }, { "Pikachu", "false" }, { "Maunzi", "false" } };
 		list.add(new MultiChoiceFrage("Franchisename", Schwierigkeitsgrad.mittel, 5.5, "Seminar", mA2));
 
-		Klausur klausur = new Klausur(100, "KlausurTest", list);
+		Klausur klausur = new Klausur(100.0, "KlausurTest", list);
 
 		new Klausurgenerator().createKlausur(klausur);
 		new Loesungsgenerator().createKlausur(klausur);

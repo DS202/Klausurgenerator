@@ -20,31 +20,34 @@ import de.arbeitsagentur.ProjektKlausurgenerator.model.Klausur;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator.Klausurgenerator;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator.Loesungsgenerator;
 
+/**
+ * Fenster zum Erstellen einer Klausur.
+ * 
+ * @author Nico & Daniel & Yannick
+ *
+ */
 public class FragenTabelleFenster {
+
+	// *** Eigenschaften *** //
 
 	private JFrame frame;
 	private JPanel panel;
 	private JTable table;
 	private JScrollPane scrollPane;
-	private static final DefaultTableModel unchangedModell = new DefaultTableModel(
+	private JLabel lblKlausurPunkte;
+	private Boolean zuruecksetzen = false;
+
+	private DefaultTableModel modell = new DefaultTableModel(
 			new Object[][] { { null, null, null, null }, { null, null, null, null }, { null, null, null, null },
 					{ null, null, null, null }, { null, null, null, null }, { null, null, null, null },
 					{ null, null, null, null }, { null, null, null, null }, { null, null, null, null },
 					{ null, null, null, null }, { null, null, null, null }, { null, null, null, null }, },
 			new String[] { "Frage", "Typ", "Punkte", "Schwierigkeitsgrad" });
 
-	private DefaultTableModel modell = rewriteModell(unchangedModell);
 	private List<AbstractFrage> alleFragenliste;
 	private List<AbstractFrage> klausurFragenListe = new ArrayList<>();
-	private Boolean zuruecksetzen = false;
-	private JLabel lblKlausurPunkte;
 
-	public FragenTabelleFenster() {
-		initialize();
-		initTable(modell);
-
-		frame.setVisible(true);
-	}
+	// *** Konstruktor *** //
 
 	public FragenTabelleFenster(List<AbstractFrage> fragenliste) {
 
@@ -55,6 +58,8 @@ public class FragenTabelleFenster {
 
 		frame.setVisible(true);
 	}
+
+	// *** Methoden *** //
 
 	private void initialize() {
 		frame = new JFrame();
@@ -105,9 +110,8 @@ public class FragenTabelleFenster {
 				System.out.println("Zurücksetzen");
 				panel.remove(scrollPane);
 
-				modell = rewriteModell(unchangedModell);
+				modell = rewriteModell();
 				zuruecksetzen = true;
-				// ausgabe(unchangedModell);
 
 				initTable(modell);
 			}
@@ -163,7 +167,8 @@ public class FragenTabelleFenster {
 
 	// *** Hilfsmethoden *** //
 
-	/** Fuellt eine JTable mit Daten aus klausurFragenListe und gibt sie zurueck.
+	/**
+	 * Fuellt eine JTable mit Daten aus klausurFragenListe und gibt sie zurueck.
 	 * 
 	 * @return Gefuellte JTable.
 	 */
@@ -184,7 +189,8 @@ public class FragenTabelleFenster {
 		return new JTable(dataBewertung, columnNamesBewertung);
 	}
 
-	/** Ermittelt die Gesamtpunktzahl an Punkten derzeit in klausurFragenListe.
+	/**
+	 * Ermittelt die Gesamtpunktzahl an Punkten derzeit in klausurFragenListe.
 	 * 
 	 * @return Double Wert (Anzahl der Pruefungspunkte.)
 	 */
@@ -199,34 +205,20 @@ public class FragenTabelleFenster {
 		return result;
 	}
 
-	/** Methode zum "Leeren" des DeafultTableModels.
+	/**
+	 * Methode zum "Leeren" des DeafultTableModels.
 	 * 
-	 * @param data DefaulttableModell voll
 	 * @return DefaulttableModell leer
 	 */
-	private DefaultTableModel rewriteModell(DefaultTableModel data) {
-		DefaultTableModel modell = null;
+	private DefaultTableModel rewriteModell() {
 
-		modell = new DefaultTableModel(
+		return new DefaultTableModel(
 				new Object[][] { { null, null, null, null }, { null, null, null, null }, { null, null, null, null },
 						{ null, null, null, null }, { null, null, null, null }, { null, null, null, null },
 						{ null, null, null, null }, { null, null, null, null }, { null, null, null, null },
 						{ null, null, null, null }, { null, null, null, null }, { null, null, null, null }, },
 				new String[] { "Frage", "Typ", "Punkte", "Schwierigkeitsgrad" });
-
-		return modell;
 	}
-
-//	private void ausgabe(DefaultTableModel data) {
-//
-//		Vector<Vector<String>> vector = data.getDataVector();
-//
-//		for (int i = 0; i < vector.size(); i++) {
-//			for (int j = 0; j < vector.get(i).size(); j++) {
-//				System.out.println(vector.get(i).get(j));
-//			}
-//		}
-//	}
 
 	/**
 	 * Erstellt eine Klausur als PDF (Zwei unterschiedliche Exceptions - 1.

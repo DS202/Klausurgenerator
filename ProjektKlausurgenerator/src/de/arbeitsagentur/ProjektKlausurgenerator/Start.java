@@ -9,6 +9,5 @@ public class Start {
 		// Hauptfenster Starten
 		new Hauptfenster();
 
-		//new TestPDF();
 	}
 }

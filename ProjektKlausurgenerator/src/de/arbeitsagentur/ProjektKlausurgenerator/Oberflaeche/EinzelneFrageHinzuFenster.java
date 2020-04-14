@@ -21,17 +21,23 @@ import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
 
+import de.arbeitsagentur.ProjektKlausurgenerator.controller.Controller;
 import de.arbeitsagentur.ProjektKlausurgenerator.enums.Schwierigkeitsgrad;
 
+/**
+ * Fenster zum Hinzufuegen einzelner Fragen
+ * 
+ * @author Nico & Anna & Danie & Yannick
+ *
+ */
 public class EinzelneFrageHinzuFenster {
+
+	// *** Eigenschaften *** //
 
 	private JFrame frame;
 	private JPanel panel;
-	private JPanel updatePanel = new JPanel();
-	private GuiUtils guiUtils = new GuiUtils();
 	private JTextField textFieldFrage;
 	private JTextField txtSeminar;
-	private String letzterFragenTyp = "Multichoice";
 
 	private JTextField textField_1Antwort;
 	private JTextField textField_2Antwort;
@@ -44,6 +50,11 @@ public class EinzelneFrageHinzuFenster {
 	private JCheckBox chckbR4;
 
 	private Hauptfenster fenster;
+	private String letzterFragenTyp = "Multichoice";
+	private JPanel updatePanel = new JPanel();
+	private Controller controller = new Controller();
+
+	// *** Konstruktor *** //
 
 	public EinzelneFrageHinzuFenster(Hauptfenster fenster) {
 		this.fenster = fenster;
@@ -52,6 +63,8 @@ public class EinzelneFrageHinzuFenster {
 
 		frame.setVisible(true);
 	}
+
+	// *** Methoden *** //
 
 	private void initialize() {
 
@@ -111,7 +124,7 @@ public class EinzelneFrageHinzuFenster {
 		panel.add(lblFragentyp);
 
 		// Label-Bild
-		ImageIcon imageIcon = GuiUtils.getScaledImageIcon("images/hinzu.PNG", 39, 39);
+		ImageIcon imageIcon = GuiUtils.bekommeSkaliertesImageIcon("images/hinzu.PNG", 39, 39);
 
 		JLabel lblBild = new JLabel();
 		lblBild.setIcon(imageIcon);
@@ -173,12 +186,19 @@ public class EinzelneFrageHinzuFenster {
 
 				if (!txtSeminar.getText().isEmpty() && !textFieldFrage.getText().isEmpty()) {
 
-					if (comboBoxTyp.getSelectedItem().toString().equalsIgnoreCase("Freitext")) {
-						guiUtils.schreibeFrageInCSV("\n" + comboBoxTyp.getSelectedItem() + ";"
-								+ textFieldFrage.getText() + ";" + comboBoxSchwierigkeit.getSelectedItem() + ";"
-								+ spinnerPunkte.getValue() + ";" + txtSeminar.getText());
-					} else {
-						guiUtils.schreibeFrageInCSV("\n" + comboBoxTyp.getSelectedItem() + ";"
+					if (comboBoxTyp.getSelectedItem().toString().equalsIgnoreCase("Freitext")
+							&& !textField_1Antwort.getText().isEmpty()) {
+
+						// Schreiben der Freitextfrage in die CSV-Datei
+						controller.schreibeFrageInCSV(
+								"\n" + comboBoxTyp.getSelectedItem() + ";" + textFieldFrage.getText() + ";"
+										+ comboBoxSchwierigkeit.getSelectedItem() + ";" + spinnerPunkte.getValue() + ";"
+										+ txtSeminar.getText() + ";" + textField_1Antwort.getText());
+
+					} else if (!textField_1Antwort.getText().isEmpty() && !textField_2Antwort.getText().isEmpty()
+							&& !textField_3Antwort.getText().isEmpty() && !textField_4Antwort.getText().isEmpty()) {
+						// Schreiben der Freitextfrage in die CSV-Datei
+						controller.schreibeFrageInCSV("\n" + comboBoxTyp.getSelectedItem() + ";"
 								+ textFieldFrage.getText() + ";" + comboBoxSchwierigkeit.getSelectedItem() + ";"
 								+ spinnerPunkte.getValue() + ";" + txtSeminar.getText() + ";"
 								+ textField_1Antwort.getText() + ";" + checkboxenAuswerten(chckbR1) + ";"
@@ -224,7 +244,7 @@ public class EinzelneFrageHinzuFenster {
 		updatePanel.add(lblRichtigeAntwort);
 
 		// Hilfe-Icon
-		ImageIcon imageIcon = GuiUtils.getScaledImageIcon("images/info.PNG", 25, 25);
+		ImageIcon imageIcon = GuiUtils.bekommeSkaliertesImageIcon("images/info.PNG", 25, 25);
 
 		JLabel lblInfoBild = new JLabel("Bild");
 		lblInfoBild.setIcon(imageIcon);
@@ -294,6 +314,8 @@ public class EinzelneFrageHinzuFenster {
 		bg.add(chckbR3);
 		bg.add(chckbR4);
 	}
+
+	// *** Hilfsmethoden *** //
 
 	private String checkboxenAuswerten(JCheckBox box) {
 
