@@ -18,13 +18,22 @@ import javax.swing.event.ListSelectionListener;
 
 import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
 
+/** Auswahlfenster zum Auswaehlen von Fragen fuer eine Klausur.
+ * 
+ * @author Nico
+ *
+ */
 public class FrageAuswaehlenFenster {
+	
+	// *** Eigenschaften *** //
 
 	private JFrame frame;
 	private JList<String> list;
 	private List<AbstractFrage> fragenList;
 	private FragenTabelleFenster fenster;
 
+	// *** Konstruktor *** //
+	
 	public FrageAuswaehlenFenster(FragenTabelleFenster fenster, List<AbstractFrage> fragenListe) {
 		this.fragenList = fragenListe;
 		this.fenster = fenster;
@@ -33,6 +42,8 @@ public class FrageAuswaehlenFenster {
 
 		frame.setVisible(true);
 	}
+	
+	// *** Methoden *** //
 
 	private void initialize() {
 		frame = new JFrame();
@@ -88,6 +99,8 @@ public class FrageAuswaehlenFenster {
 		btnFrageHinzu.setBounds(694, 507, 155, 23);
 		panel.add(btnFrageHinzu);
 	}
+	
+	// *** Hilfsmethoden *** //
 	
 	/** Fuellt ein DefaultListModel mit den Werten aus der fragenliste.
 	 * 

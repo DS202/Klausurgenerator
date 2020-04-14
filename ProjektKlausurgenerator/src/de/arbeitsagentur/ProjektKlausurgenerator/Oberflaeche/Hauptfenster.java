@@ -20,19 +20,26 @@ import javax.swing.border.BevelBorder;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import de.arbeitsagentur.ProjektKlausurgenerator.controller.Controller;
 import de.arbeitsagentur.ProjektKlausurgenerator.enums.Filetype;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
 
+/** Hauptfenster der Anwendung
+ * 
+ * @author Nico & Anna & Daniel & Yannick & Patrick & Karl & Sven & Philipp 
+ *
+ */
 public class Hauptfenster {
 
 	private JFrame frame;
 	private JPanel panel;
 	private GuiUtils guiUtils = new GuiUtils();
+	private Controller controller = new Controller();
 	private List<AbstractFrage> fragenliste;
 
 	public Hauptfenster() {
 
-		this.fragenliste = guiUtils.csvEinlesen();
+		this.fragenliste = controller.getAlleFragenAusFragenCSV();
 
 		initialize();
 		initMenue();
@@ -68,7 +75,7 @@ public class Hauptfenster {
 		panel.add(lblKlausur);
 
 		// Label-Bild
-		ImageIcon imageIcon = GuiUtils.getScaledImageIcon("images/pruefungIcon2.PNG", 350, 440);
+		ImageIcon imageIcon = GuiUtils.bekommeSkaliertesImageIcon("images/pruefungIcon2.PNG", 350, 440);
 
 		JLabel lblBild = new JLabel();
 		lblBild.setIcon(imageIcon);
@@ -110,7 +117,7 @@ public class Hauptfenster {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Hilfe anzeigen");
 				new HilfeFenster();
-				guiUtils.winNotification("Authoren",
+				guiUtils.erzeugeWindowsNotification("Authoren",
 						"Anna Sperling, Daniel Schmidt, Nico Loss, Sven Günther, Karl Ullrich, Patrick Özer-Peuerle, Philipp Maier, Yannick Marchl, David Jager",
 						"Info");
 			}
@@ -246,7 +253,7 @@ public class Hauptfenster {
 	private void aktionErstellen() {
 		if (fragenliste == null) {
 			System.out.println("Erstellen");
-			new FragenTabelleFenster();
+			new FragenTabelleFenster(fragenliste);
 		} else {
 			System.out.println("Erstellen");
 			new FragenTabelleFenster(fragenliste);
@@ -258,7 +265,7 @@ public class Hauptfenster {
 	 * Neu Einlesen der CSV-Datei, nachdem eine Frage hinzugefuegt wurde.
 	 */
 	protected void update() {
-		this.fragenliste = guiUtils.csvEinlesen();
+		this.fragenliste = controller.getAlleFragenAusFragenCSV();
 	}
 
 }
