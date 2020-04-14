@@ -1,6 +1,5 @@
 package de.arbeitsagentur.ProjektKlausurgenerator.model.klausurgenerator;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -8,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.itextpdf.text.BadElementException;
-import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
@@ -39,11 +37,13 @@ public abstract class PDFCreator {
 	protected FootEvent footEvent = new FootEvent();
 
 	protected int frageZahl = 1;
-/**
- * Erstellt mit Hilfe eines Klausurobjektes ein PDF
- * @param klausur
- * @return
- */
+
+	/**
+	 * Erstellt mit Hilfe eines Klausurobjektes ein PDF
+	 * 
+	 * @param klausur
+	 * @return
+	 */
 	public boolean createKlausur(Klausur klausur) {
 		try {
 			setClassVariables(klausur);
@@ -64,7 +64,7 @@ public abstract class PDFCreator {
 			KlausurLogger.getInstance().addSaveError(e);
 			e.printStackTrace();
 			return false;
-		} 
+		}
 		return true;
 	}
 
@@ -78,7 +78,7 @@ public abstract class PDFCreator {
 	private void addInhalt() throws MalformedURLException, IOException, DocumentException {
 		int frageIndex = 1;
 		for (AbstractFrage frage : fragenListe) {
-			KlausurLogger.getInstance().addLog("Setze Frage: "+frageIndex);
+			KlausurLogger.getInstance().addLog("Setze Frage: " + frageIndex);
 			KlausurParagraph frageParagraph = new KlausurParagraph();
 			KlausurLogger.getInstance().addLog("Setze Fragetext");
 			KlausurParagraph frageText = new KlausurParagraph();
@@ -91,15 +91,9 @@ public abstract class PDFCreator {
 			KlausurLogger.getInstance().addLog("Setze Paragraph in Dokument");
 			klausurDokument.addParagraphs(frageParagraph);
 
-			//pruefeFragenZahlAufSeite(frageIndex);
+			// pruefeFragenZahlAufSeite(frageIndex);
 
 			frageIndex++;
-		}
-	}
-
-	private void pruefeFragenZahlAufSeite(int frageIndex) {
-		if (frageIndex % 3 == 0) {
-			klausurDokument.getDocument().newPage();
 		}
 	}
 
@@ -111,7 +105,6 @@ public abstract class PDFCreator {
 		punkteParagraph.setAlignment(Element.ALIGN_RIGHT);
 		frageParagraph.getParagraph().add(punkteParagraph);
 
-
 	}
 
 	private void addTitleBlatt() throws DocumentException {
@@ -120,7 +113,7 @@ public abstract class PDFCreator {
 
 		setEintragsZeile();
 
-		setLeerZeilen(26 - 2 * getDurchgeange());
+		setLeerzeilen(26 - 2 * getDurchgeange());
 
 		setPunkteTabelle();
 
@@ -132,7 +125,7 @@ public abstract class PDFCreator {
 		for (List<AbstractFrage> list : subLists) {
 			setTeilTabelle(list);
 		}
-		setLeerZeilen(1);
+		setLeerzeilen(1);
 
 		PdfPTable notenBildung = new PdfPTable(2);
 		notenBildung.addCell("Erreichte Punkte gesamt:");
@@ -215,7 +208,7 @@ public abstract class PDFCreator {
 		return listenGroesse / 6;
 	}
 
-	private void setLeerZeilen(int zeilen) throws DocumentException {
+	private void setLeerzeilen(int zeilen) throws DocumentException {
 		for (int i = 0; i <= zeilen; i++) {
 			klausurDokument.getDocument().add(new Paragraph(" "));
 		}

@@ -14,7 +14,7 @@ import de.arbeitsagentur.ProjektKlausurgenerator.model.KlausurLogger;
  */
 public class KlausurDocument {
 
-	private final int maxCounterLines = 35;
+	private final int MAXCOUNTERLINES = 35;
 
 	private int contentCounter = 0;
 
@@ -29,7 +29,7 @@ public class KlausurDocument {
 	public void addParagraphs(KlausurParagraph paragraph) throws DocumentException {
 		contentCounter = contentCounter + paragraph.getSize();
 		KlausurLogger.getInstance().addLog("Prüfe Seitengröße");
-		if (contentCounter > maxCounterLines) {
+		if (contentCounter > MAXCOUNTERLINES) {
 			KlausurLogger.getInstance().addLog("Setze neue Seite");
 			document.newPage();
 			contentCounter = paragraph.getSize();

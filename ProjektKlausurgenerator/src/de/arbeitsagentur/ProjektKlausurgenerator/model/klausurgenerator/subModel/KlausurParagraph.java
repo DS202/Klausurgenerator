@@ -16,7 +16,7 @@ import com.itextpdf.text.Paragraph;
  */
 public class KlausurParagraph {
 
-	private final int maxCounterChar = 78;
+	private final int MAXCOUNTERCHAR = 78;
 	private int size = 0;
 
 	private Paragraph paragraph;
@@ -86,11 +86,11 @@ public class KlausurParagraph {
 
 	private void countLines(String text) {
 		int length = text.length();
-		int rest = text.length() % maxCounterChar;
+		int rest = text.length() % MAXCOUNTERCHAR;
 		if (rest != 0) {
-			length = length + (maxCounterChar - rest);
+			length = length + (MAXCOUNTERCHAR - rest);
 		}
-		size = size + length / maxCounterChar;
+		size = size + length / MAXCOUNTERCHAR;
 
 	}
 
