@@ -118,7 +118,7 @@ public class Hauptfenster {
 				System.out.println("Hilfe anzeigen");
 				new HilfeFenster();
 				guiUtils.erzeugeWindowsNotification("Authoren",
-						"Anna Sperling, Daniel Schmidt, Nico Loss, Sven Günther, Karl Ullrich, Patrick Özer-Peuerle, Philipp Maier, Yannick Marchl, David Jager",
+						"Anna Sperling, Daniel Schmidt, Nico Loss, Sven Günther, Karl Ullrich, Patrick Özer-Peuerle, Philipp Maier, Yannick Marchl, David Jager, David Boroviak",
 						"Info");
 			}
 		});
