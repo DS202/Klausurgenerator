@@ -36,6 +36,7 @@ public class FragenTabelleFenster {
 	private JScrollPane scrollPane;
 	private JLabel lblKlausurPunkte;
 	private Boolean zuruecksetzen = false;
+	private Hauptfenster hauptfenster;
 
 	private DefaultTableModel modell = new DefaultTableModel(
 			new Object[][] { { null, null, null, null }, { null, null, null, null }, { null, null, null, null },
@@ -49,8 +50,10 @@ public class FragenTabelleFenster {
 
 	// *** Konstruktor *** //
 
-	public FragenTabelleFenster(List<AbstractFrage> fragenliste) {
+	public FragenTabelleFenster(Hauptfenster hauptfenster, List<AbstractFrage> fragenliste) {
 
+		// Uebergabe des hauptfensters fuer update Methoden
+		this.hauptfenster = hauptfenster;
 		this.alleFragenliste = fragenliste;
 
 		initialize();
@@ -96,6 +99,10 @@ public class FragenTabelleFenster {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Speichern");
 
+				// Uebergabe der Klausurliste an das Hauptfenster fuer Export/Import
+				hauptfenster.setKlausurListe(klausurFragenListe);
+
+				// Erstellen der Klausur-PDF
 				klausurAlsPdfErstellen();
 
 			}
@@ -111,9 +118,9 @@ public class FragenTabelleFenster {
 				panel.remove(scrollPane);
 
 				modell = rewriteModell();
-				zuruecksetzen = true;
+				zuruecksetzen = true;// Flag zum zuruecksetzen
 
-				initTable(modell);
+				initTable(modell);// Table neu initialisieren
 			}
 		});
 		btnZurcksetzten.setBounds(10, 602, 120, 23);
@@ -225,7 +232,8 @@ public class FragenTabelleFenster {
 	 * Erstellen der Klausur - 2. Erstellen des Lösungsbogens)
 	 */
 	private void klausurAlsPdfErstellen() {
-		Klausur berechneteKlausur = new Klausur(getKlausurpunkte(), "Test-Klausur", klausurFragenListe);
+		Klausur berechneteKlausur = new Klausur(getKlausurpunkte(), "Klausur " + klausurFragenListe.get(0).getSeminar(),
+				klausurFragenListe);
 
 		try {
 			new Klausurgenerator().createKlausur(berechneteKlausur);

@@ -53,6 +53,10 @@ public class MultiChoiceFrage extends AbstractFrage {
 	public String[][] getAntworten() {
 		return antworten;
 	}
+	
+	public String gibAlleAntwortenAlsStringZurueck() {
+		return (String) getAntwort();
+	}
 
 	@Override
 	protected Object getAntwort() {

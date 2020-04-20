@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.List;
+import java.util.regex.Pattern;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -24,9 +25,10 @@ import de.arbeitsagentur.ProjektKlausurgenerator.controller.Controller;
 import de.arbeitsagentur.ProjektKlausurgenerator.enums.Filetype;
 import de.arbeitsagentur.ProjektKlausurgenerator.model.AbstractFrage;
 
-/** Hauptfenster der Anwendung
+/**
+ * Hauptfenster der Anwendung
  * 
- * @author Nico & Anna & Daniel & Yannick & Patrick & Karl & Sven & Philipp 
+ * @author Nico & Anna & Daniel & Yannick & Patrick & Karl & Sven & Philipp
  *
  */
 public class Hauptfenster {
@@ -36,6 +38,7 @@ public class Hauptfenster {
 	private GuiUtils guiUtils = new GuiUtils();
 	private Controller controller = new Controller();
 	private List<AbstractFrage> fragenliste;
+	private List<AbstractFrage> erstellteKlausurListe;
 
 	public Hauptfenster() {
 
@@ -201,32 +204,46 @@ public class Hauptfenster {
 
 	private void aktionExport() {
 
-		JFileChooser fileChooser = new JFileChooser();
-		fileChooser.setDialogTitle("Speicherort Festlegen");
-		fileChooser.setAcceptAllFileFilterUsed(false);// deaktiviert "eigene Datei" Auswahlmoeglickeit
+//		if (erstellteKlausurListe == null || erstellteKlausurListe.isEmpty()) {
+//			JOptionPane.showMessageDialog(null,
+//					"Keine Klausur zum Export vorhanden.\nBitte zuerst eine Klausur erstellen.", "Error",
+//					JOptionPane.ERROR_MESSAGE);
+//		} else {
+			JFileChooser fileChooser = new JFileChooser();
+			fileChooser.setDialogTitle("Speicherort Festlegen");
+			fileChooser.setAcceptAllFileFilterUsed(false);// deaktiviert "eigene Datei" Auswahlmoeglickeit
 
-		FileFilter filtercsv = new FileNameExtensionFilter("CSV", "csv");
-		FileFilter filterpdf = new FileNameExtensionFilter("PDF", "pdf");
+			FileFilter filtercsv = new FileNameExtensionFilter("CSV", "csv");
+			FileFilter filterpdf = new FileNameExtensionFilter("PDF", "pdf");
 
-		fileChooser.addChoosableFileFilter(filtercsv);
-		fileChooser.addChoosableFileFilter(filterpdf);
+			fileChooser.addChoosableFileFilter(filtercsv);
+			fileChooser.addChoosableFileFilter(filterpdf);
 
-		int userSelection = fileChooser.showSaveDialog(frame);
+			int userSelection = fileChooser.showSaveDialog(frame);
 
-		if (userSelection == JFileChooser.APPROVE_OPTION) {
+			if (userSelection == JFileChooser.APPROVE_OPTION) {
 
-			File fileToSave = fileChooser.getSelectedFile();
-			FileFilter filter = fileChooser.getFileFilter();
-			Filetype type = null;
+				File fileToSave = fileChooser.getSelectedFile();
+				FileFilter filter = fileChooser.getFileFilter();
+				Filetype type = null;
 
-			if (filter.equals(filtercsv)) {
-				type = Filetype.CSV;
-			} else {
-				type = Filetype.PDF;
-			}
+				if (filter.equals(filtercsv)) {
+					type = Filetype.CSV;
+					
+					String separator = "\\";
+					String[] tmp = fileToSave.getAbsolutePath().split(Pattern.quote(separator));
+					
+					controller.exportKlausurAlsCSV(fileToSave.getAbsolutePath(), tmp[tmp.length-1], erstellteKlausurListe);
+					
+					
+				} else {
+					type = Filetype.PDF;
+				}
 
-			// TODO:File speichern nach Erhalt von Logik
-			System.out.println("Save as file: " + fileToSave.getAbsolutePath() + "." + type);
+				// TODO:File speichern nach Erhalt von Logik
+				System.out.println("Save as file: " + fileToSave.getAbsolutePath() + "." + type);
+//			}
+
 		}
 	}
 
@@ -252,20 +269,26 @@ public class Hauptfenster {
 
 	private void aktionErstellen() {
 		if (fragenliste == null) {
-			System.out.println("Erstellen");
-			new FragenTabelleFenster(fragenliste);
+			System.out.println("Fehler beim Klausur ErstellenButton");
+			throw new RuntimeException("fragenliste ist Null!");
 		} else {
 			System.out.println("Erstellen");
-			new FragenTabelleFenster(fragenliste);
+			new FragenTabelleFenster(this, fragenliste);
 		}
 
 	}
-	
+
 	/**
 	 * Neu Einlesen der CSV-Datei, nachdem eine Frage hinzugefuegt wurde.
 	 */
 	protected void update() {
 		this.fragenliste = controller.getAlleFragenAusFragenCSV();
+	}
+
+	// *** Setter *** //
+
+	public void setKlausurListe(List<AbstractFrage> erstellteKlausurListe) {
+		this.erstellteKlausurListe = erstellteKlausurListe;
 	}
 
 }
